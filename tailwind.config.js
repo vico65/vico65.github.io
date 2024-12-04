@@ -3,7 +3,11 @@ module.exports = {
   content: ["*.{html,js}"],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        jetbrains_mono : ['JetBrains Mono']
+      },
+    }
   },
   plugins: [],
 }
