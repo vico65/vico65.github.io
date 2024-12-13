@@ -4,71 +4,136 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css"
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+            rel="stylesheet"
         />
         <link rel="stylesheet" href="node_modules\@mynaui\icons\mynaui.css" />
         <link href="output.css" rel="stylesheet" />
         <title>Alvico</title>
     </head>
     <body>
-        <nav
-        class="w-screen h-14 fixed z-20 dark:bg-slate-900 bg-slate-50 shadow-md flex gap-2 px-3"
+        <header
+            class="w-full absolute top-0 left-0 z-10 dark:bg-dark bg-transparent flex items-center  "
         >
-        <button role="button" id="button_list_sidebar" class="sm:hidden">
-            <i
-            id="icon_list_sidebar"
-            class="bi bi-list text-3xl self-center dark:text-slate-300"
-            ></i>
-        </button>
+            <div class="container">
+                <div class="flex items-center justify-between relative">
+                    <!-- judul -->
+                    <div class="px-4">
+                        <a
+                            href="#home"
+                            class="font-bold self-center text-base sm:text-lg text-sky-500 dark:text-slate-300 py-4 block"
+                            >Alvico</a
+                        >
+                    </div>
 
-        <div class="flex gap-2 sm:ml-52">
-            <!-- <img src="../../res/logo-navbar.png" alt="logo_unsri" class="w-8 h-8  self-center dark:hidden" /> -->
-            <h1
-            class="h-fit font-jetbrains_mono font-semibold self-center text-lg dark:font-semibold dark:text-slate-300"
-            >
-            Alvico
-            <!-- Alvico <span class="text-sky-600 dark:text-sky-500">Musi</span> -->
-            </h1>
-        </div>
-
-        <div class="flex gap-3 sm:gap-4 self-center ml-auto mr-4 md:mr-10 ">
-            <a href="#" class="font-jetbrains_mono font-semibold flex self-center hover:bg-cyan-100 px-2 py-1 rounded-lg dark:hover:bg-slate-800">
-                Blog
-            </a>
-            <a href="#" class="font-jetbrains_mono font-semibold flex self-center hover:bg-cyan-100 px-2 py-1 rounded-lg dark:hover:bg-slate-800">
-                Project
-            </a>
-            <a href="#" class="font-jetbrains_mono font-semibold flex self-center hover:bg-cyan-100 px-2 py-1 rounded-lg dark:hover:bg-slate-800">
-                <div class="text-2xl mynaui-brand-github dark:text-slate-50"></div>
-            </a>
-            <button id="toggle-theme-button" type="button" class="hover:bg-cyan-100 px-1 rounded-lg py-1
-            dark:hover:bg-slate-800">
-                <div id="toggle-theme-icon" class="text-2xl dark:text-slate-50">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-                        <path d='M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0m-4-9v2m0 14.004v2M5 12H3m18 0h-2m0-7-2 2M5 5l2 2m0 10-2 2m14 0-2-2'/>
-                    </svg>
+                    <!-- Menu list -->
+                    <div class="flex items-center px-4">
+                        <button
+                            id="hamburger-menu"
+                            name="hamburger-menu"
+                            type="button"
+                            class="block absolute right-4 sm:hidden group"
+                        >
+                            <span class="hamburger-line origin-top-left  group-hover:bg-sky-500 transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line group-hover:bg-sky-500 transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line origin-bottom-left  group-hover:bg-sky-500 transition duration-300 ease-in-out"></span>
+                        </button>
+                    </div>
                 </div>
-            </button>
-        </div>
-        </nav>
+
+                <!-- <div class="flex gap-3 sm:gap-4 self-center ml-auto mr-4 md:mr-10">
+                    <a
+                        href="#"
+                        class="font-jetbrains_mono font-semibold flex self-center hover:bg-cyan-100 px-2 py-1 rounded-lg dark:hover:bg-slate-800 dark:text-slate-300"
+                    >
+                        Blog
+                    </a>
+                    <a
+                        href="#"
+                        class="font-jetbrains_mono font-semibold flex self-center hover:bg-cyan-100 px-2 py-1 rounded-lg dark:hover:bg-slate-800 dark:text-slate-300"
+                    >
+                        Project
+                    </a>
+                    <a
+                        href="#"
+                        class="font-jetbrains_mono font-semibold flex self-center hover:bg-cyan-100 px-2 py-1 rounded-lg dark:hover:bg-slate-800"
+                    >
+                        <div class="text-2xl dark:text-slate-50">
+                            <svg
+                                width="24"
+                                height="24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                viewBox="0 0 24 24"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M3.5 15.668q.675.081 1 .618c.326.537 1.537 2.526 2.913 2.526H9.5m5.672-3.513q.823 1.078.823 1.936V21m-5.625-5.609q-.87.954-.869 1.813V21"
+                                />
+                                <path
+                                    d="M15.172 15.299c1.202-.25 2.293-.682 3.14-1.316 1.448-1.084 2.188-2.758 2.188-4.411 0-1.16-.44-2.243-1.204-3.16-.425-.511.819-3.872-.286-3.359-1.105.514-2.725 1.198-3.574.947-.909-.268-1.9-.416-2.936-.416-.9 0-1.766.111-2.574.317-1.174.298-2.296-.363-3.426-.848-1.13-.484-.513 3.008-.849 3.422C4.921 7.38 4.5 8.44 4.5 9.572c0 1.653.895 3.327 2.343 4.41.965.722 2.174 1.183 3.527 1.41"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <button
+                        id="toggle-theme-button"
+                        type="button"
+                        class="hover:bg-cyan-100 px-1 rounded-lg py-1 dark:hover:bg-slate-800"
+                    >
+                        <div
+                            id="toggle-theme-icon"
+                            class="text-2xl dark:text-slate-50"
+                        >
+                            <svg
+                                width="24"
+                                height="24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                viewBox="0 0 24 24"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    id="light-mode-icon"
+                                    class=""
+                                    d="M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0m-4-9v2m0 14.004v2M5 12H3m18 0h-2m0-7-2 2M5 5l2 2m0 10-2 2m14 0-2-2"
+                                />
+                                <path
+                                    id="dark-mode-icon"
+                                    class="hidden"
+                                    d="M21 12.808c-.5 5.347-5.849 9.14-11.107 7.983C-.078 18.6 1.15 3.909 11.11 3 6.395 9.296 14.619 17.462 21 12.808"
+                                />
+                            </svg>
+                        </div>
+                    </button>
+                </div> -->
+            </div>
+        </header>
+
+        <!-- About Section Start -->
+        <section id="about" class="pt-36 bg-slate-100">
+            <div class="container">
+                <div class="flex flex-wrap">
+                    <div class="bg-teal-600">
+                        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam velit deleniti quidem culpa voluptatem similique, error quam dicta nulla, nemo perferendis, iure adipisci amet. Voluptatibus eum magnam placeat, facilis quibusdam molestiae quas modi est voluptatem suscipit? Corrupti unde molestias iure ratione aut minima, culpa itaque dolorem nulla voluptate magni ex, quibusdam, porro ipsam mollitia voluptatem cumque maxime? Qui, dignissimos omnis. Laudantium quod ab quae, doloremque laboriosam quia? Enim fuga in totam tempore magnam! Itaque quod, at fugit quis vitae obcaecati magni quas repudiandae minima inventore laborum cupiditate repellendus quaerat non debitis esse. Amet voluptas beatae quis dicta cum delectus! Repellendus eveniet cupiditate magnam veniam aut ipsam praesentium quibusdam, similique magni vero velit beatae odio quidem nostrum sint dignissimos nemo corporis, amet tempora aspernatur iste est necessitatibus. Accusamus sed nostrum nobis unde? Quia harum repudiandae minus ratione cumque, officiis aliquam optio facere explicabo neque. Ipsum nobis facere, deleniti sit quia expedita necessitatibus maxime obcaecati nostrum, ab veritatis cupiditate omnis velit voluptate, ducimus nesciunt ipsa reprehenderit inventore consequatur. Hic at cupiditate sapiente velit culpa maiores, recusandae natus ea provident fugit modi animi amet aspernatur molestias dolor, alias maxime. Quos ad mollitia nulla ea delectus animi voluptates sapiente maxime distinctio. Molestias explicabo alias eligendi tempora soluta enim nihil dolorem repellendus harum itaque, quas earum, ipsam, aut eveniet. Hic, obcaecati saepe modi aperiam assumenda quasi reiciendis nam voluptatibus vitae minima reprehenderit in sed tempora fugiat magni expedita! Unde dolores velit, odit eveniet laudantium molestiae, vero sunt dolore numquam non, sed maiores aliquid pariatur. Rerum perspiciatis dicta inventore modi, asperiores similique. Cumque deleniti magni facilis repellendus alias porro aliquam numquam tempore fugit beatae iste incidunt veritatis, ducimus amet id. Odio at velit vel enim maiores omnis, fuga minus quos tempore assumenda cum amet dolore pariatur? Vero aspernatur, itaque voluptatem consequuntur at harum magni? Minus repellat, necessitatibus, pariatur incidunt doloremque, maiores adipisci optio magnam iusto asperiores nemo commodi unde tenetur natus fugit? Atque dolore magnam voluptatem distinctio molestias excepturi ad, aliquam a totam earum sed, similique aperiam animi velit, consequuntur quas dolor quod mollitia officia perspiciatis est vel voluptas eum? Reprehenderit molestiae doloremque deserunt quasi nobis odit! Ea facilis quibusdam possimus officiis quod porro dicta? Sequi totam accusamus repellat officiis sapiente, deserunt voluptas dolor nihil eligendi voluptates eos et incidunt excepturi laudantium assumenda autem aspernatur ex voluptatibus rem voluptate eius recusandae impedit. Incidunt reiciendis tempora harum ab est fugit provident, distinctio nisi quo culpa ipsum amet omnis. Ratione porro consequatur excepturi, nulla voluptates sunt, beatae officia dolore deleniti inventore rem perspiciatis commodi quaerat fugiat, blanditiis soluta quo illo nobis quae nemo facilis impedit quisquam? Accusamus at reiciendis aut tempora illo, exercitationem omnis eum sapiente obcaecati? Voluptate optio vitae quibusdam facilis? Ullam enim iure ratione optio, veritatis aut corrupti dignissimos assumenda illo atque voluptate exercitationem aspernatur perspiciatis amet cumque odio cum eum voluptatem eligendi porro facere provident neque? Inventore repudiandae sapiente non eum voluptatem quisquam temporibus. Ratione numquam unde quaerat veritatis ab? Quaerat ipsam atque tenetur laborum inventore perferendis voluptates nostrum ab, vitae aliquam voluptatem ipsum. Aliquid.</h2>
+                    </div>
+                    <div class="bg-rose-600">
+                        <h2>ini gambar</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section End -->
     </body>
 
-    <script>
-        // membuat variabel
-        let toggleThemeButton = document.getElementById('toggle-theme-button')
-        let toggleThemeIcon = document.getElementById('toggle-theme-icon')
-        let htmlTag = document.querySelector('html')
-
-        //menjalankan listener ketika tombol toggle theme ditekan
-        toggleThemeButton.addEventListener('click', () => {
-            htmlTag.classList.toggle('dark')
-            toggleThemeIcon.classList.toggle('mynaui-sun')
-            toggleThemeIcon.classList.toggle('mynaui-moon')
-        })
-    </script>
+    <script src="public\js\script.js"></script>
 </html>
