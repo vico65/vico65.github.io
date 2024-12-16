@@ -16,6 +16,7 @@ let lightModeIcon = document.getElementById("light-mode-icon"); // light mode = 
 let darkModeIcon = document.getElementById("dark-mode-icon"); // dark mode = moon
 let htmlTag = document.querySelector("html");
 let hamburgerMenuButton = document.getElementById('hamburger-menu');
+let navbarMenu = document.getElementById('nav-menu');
 
 //menjalankan listener ketika tombol toggle theme ditekan
 // toggleThemeButton.addEventListener("click", () => {
@@ -27,6 +28,7 @@ let hamburgerMenuButton = document.getElementById('hamburger-menu');
 //menjalankan listener ketika tombol hamburger ditekan
 hamburgerMenuButton.addEventListener('click', () => {
    hamburgerMenuButton.classList.toggle('hamburger-active');
+   navbarMenu.classList.toggle('hidden');
 });
 
 
