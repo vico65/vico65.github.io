@@ -8,6 +8,7 @@ window.onscroll = function() {
    } else {
       header.classList.remove('navbar-fixed');
    }
+   
 }
 
 // membuat variabel

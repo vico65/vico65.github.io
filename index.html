@@ -1,487 +1,778 @@
 <!DOCTYPE html>
 <html lang="en" class="">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="node_modules\@mynaui\icons\mynaui.css" />
-        <link href="output.css" rel="stylesheet" />
-        <title>Alvico</title>
-    </head>
-    <body>
-        <header
-            class="w-full absolute top-0 left-0 z-10 dark:bg-dark bg-transparent flex items-center"
-        >
-            <div class="container">
-                <div class="flex items-center justify-between relative">
-                    <!-- judul -->
-                    <div class="px-4">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="node_modules\@mynaui\icons\mynaui.css" />
+		<link href="output.css" rel="stylesheet" />
+		<title>Alvico</title>
+	</head>
+	<body>
+		<header
+			class="w-full absolute top-0 left-0 z-10 dark:bg-dark bg-transparent flex items-center"
+		>
+			<div class="container">
+				<div class="flex items-center justify-between relative">
+					<!-- judul -->
+					<div class="px-4">
+						<a
+							href="#home"
+							class="font-bold self-center text-base sm:text-lg text-sky-500 dark:text-slate-300 py-4 block"
+							>Alvico</a
+						>
+					</div>
+
+					<!-- Menu list -->
+					<div class="flex items-center px-4">
+						<button
+							id="hamburger-menu"
+							name="hamburger-menu"
+							type="button"
+							class="block absolute right-4 sm:hidden group"
+						>
+							<span
+								class="hamburger-line origin-top-left group-hover:bg-sky-500 transition duration-300 ease-in-out"
+							></span>
+							<span
+								class="hamburger-line group-hover:bg-sky-500 transition duration-300 ease-in-out"
+							></span>
+							<span
+								class="hamburger-line origin-bottom-left group-hover:bg-sky-500 transition duration-300 ease-in-out"
+							></span>
+						</button>
+
+						<nav
+							id="nav-menu"
+							class="absolute max-w-[250px] py-5 shadow-lg rounded-lg w-full right-4 top-full hidden lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+						>
+							<ul class="block lg:flex">
+								<li class="group">
+									<a
+										href="#"
+										class="font-semibold group-hover:text-primary md:group-hover:bg-cyan-500 px-2 py-1 rounded-lg dark:hover:bg-slate-800 dark:text-slate-300"
+									>
+										Tentang Saya
+									</a>
+								</li>
+								<li class="group">
+									<a
+										href="#"
+										class="font-semibold group-hover:text-primary md:group-hover:bg-cyan-500 px-2 py-1 rounded-lg dark:hover:bg-slate-800 dark:text-slate-300"
+									>
+										Portofolio
+									</a>
+								</li>
+								<li class="group">
+									<a
+										href="#"
+										class="font-semibold group-hover:text-primary md:group-hover:bg-cyan-500 px-2 py-1 rounded-lg dark:hover:bg-slate-800 dark:text-slate-300"
+									>
+										Blog
+									</a>
+								</li>
+								<li class="group">
+									<a
+										href="#"
+										class="font-semibold group-hover:text-primary md:group-hover:bg-cyan-500 px-2 py-1 rounded-lg dark:hover:bg-slate-800 dark:text-slate-300"
+									>
+										Kontak
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section Start -->
+		<section id="hero" class="pt-24">
+			<div class="container">
+				<div class="flex flex-wrap">
+					<div class="w-full lg:w-1/2 self-center px-4">
+						<h1
+							class="text-primary py-1 text-base font-semibold md:text-xl"
+						>
+							Halo Semua👋, Saya
+							<span
+								class="text-dark text-4xl lg:text-5xl font-bold block"
+								>Alvico</span
+							>
+						</h1>
+						<h2
+							class="font-medium text-slate-500 text-lg lg:text-2xl py-1 mb-5"
+						>
+							Junior Software
+							<span class="text-secondary font-semibold"
+								>Developer</span
+							>
+						</h2>
+						<p
+							class="font-medium leading-relaxed capitalize py-1 text-slate-400 mb-10"
+						>
+							Math enthusiast, movie lover, and football fan -
+							visca barca 🔵🔴
+						</p>
+
+						<a
+							href="#"
+							class="py-3 px-6 text-base font-semibold bg-sky-500 rounded-full text-white hover:bg-sky-400 hover:shadow-lg transition duration-300 ease-in-out"
+							>Hubungi Saya
+						</a>
+					</div>
+					<div class="w-full lg:w-1/2 self-end px-4">
+						<div class="mt-10 lg:mt-0">
+							<img
+								src="res\images\alvico-bg.png"
+								alt="alvico image"
+								class="max-w-full mx-auto rounded-full shadow-lg scale-90 lg:scale-75"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Hero Section End -->
+
+		<!-- About Me Section Start -->
+		<section id="about" class="pt-16 lg:pt-16">
+			<div class="container">
+				<div class="flex flex-wrap">
+					<div class="w-full lg:w-1/2 px-4 mb-10">
+						<h3
+							class="text-sky-500 font-bold text-lg uppercase mb-2"
+						>
+							Tentang Saya
+						</h3>
+						<p
+							class="text-pretty text-slate-500 max-w-xl font-medium"
+						>
+							Saya Alvico, lulusan S1 Jurusan Sistem Informasi
+							Universitas Sriwijaya 2024, yang saat ini tinggal di
+							Palembang. Saya telah menyelesaikan perjalanan
+							kuliah saya dengan sukses dan sedang fokus pada
+							pengembangan karir di dunia teknologi informasi.
+							Saat ini, saya terbuka untuk bekerja.
+						</p>
+					</div>
+					<div class="w-full lg:w-1/2 px-4">
+						<h3 class="font-semibold text-base mb-2">
+							Mari Berteman
+						</h3>
+						<p class="font-medium text-slate-500 mb-4">
+							Untuk mengetahui lebih lanjut tentang saya secara
+							personal baik pengalaman ataupun hobi, silakan
+							kunjungi sosial media saya:
+						</p>
+						<div class="flex items-center mb-10">
+							<!-- Linked In -->
+							<a
+								href="http://www.linkedin.com/in/alvico65"
+								target="_blank"
+								class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
+							>
+								<svg
+									width="24"
+									height="24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.5"
+									viewBox="0 0 24 24"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm5-1.775v.5"
+									/>
+									<path
+										d="M8 16.375V10.75m4 5.625V13.5m0 0v-2.75m0 2.75c0-1.288 1.222-2 2.4-2 1.6 0 1.6 1.375 1.6 2.875v2"
+									/>
+								</svg>
+							</a>
+
+							<!-- Github -->
+							<a
+								href="https://github.com/vico65"
+								target="_blank"
+								class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
+							>
+								<svg
+									width="24"
+									height="24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.5"
+									viewBox="0 0 24 24"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M3.5 15.668q.675.081 1 .618c.326.537 1.537 2.526 2.913 2.526H9.5m5.672-3.513q.823 1.078.823 1.936V21m-5.625-5.609q-.87.954-.869 1.813V21"
+									/>
+									<path
+										d="M15.172 15.299c1.202-.25 2.293-.682 3.14-1.316 1.448-1.084 2.188-2.758 2.188-4.411 0-1.16-.44-2.243-1.204-3.16-.425-.511.819-3.872-.286-3.359-1.105.514-2.725 1.198-3.574.947-.909-.268-1.9-.416-2.936-.416-.9 0-1.766.111-2.574.317-1.174.298-2.296-.363-3.426-.848-1.13-.484-.513 3.008-.849 3.422C4.921 7.38 4.5 8.44 4.5 9.572c0 1.653.895 3.327 2.343 4.41.965.722 2.174 1.183 3.527 1.41"
+									/>
+								</svg>
+							</a>
+
+							<!-- Instagram 1 -->
+							<a
+								href="https://www.instagram.com/vico65_/"
+								target="_blank"
+								class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
+							>
+								<svg
+									width="24"
+									height="24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.5"
+									viewBox="0 0 24 24"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm14-2.9h.5"
+									/>
+									<path
+										d="M15.462 11.487a3.5 3.5 0 1 1-6.925 1.026 3.5 3.5 0 0 1 6.925-1.026"
+									/>
+								</svg>
+							</a>
+
+							<!-- Instagram 2 -->
+							<a
+								href="https://www.instagram.com/bjismangk0/"
+								target="_blank"
+								class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
+							>
+								<svg
+									width="24"
+									height="24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.5"
+									viewBox="0 0 24 24"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm14-2.9h.5"
+									/>
+									<path
+										d="M15.462 11.487a3.5 3.5 0 1 1-6.925 1.026 3.5 3.5 0 0 1 6.925-1.026"
+									/>
+								</svg>
+							</a>
+
+							<!-- Facebook -->
+							<a
+								href="https://www.facebook.com/alvico.casilas/"
+								target="_blank"
+								class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
+							>
+								<svg
+									width="24"
+									height="24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.5"
+									viewBox="0 0 24 24"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M6.5 10v4h3v7h4v-7h3l1-4h-4V8c0-.545.455-1 1-1h3V3h-3c-2.723 0-5 2.277-5 5v2z"
+									/>
+								</svg>
+							</a>
+
+							<!-- TikTok -->
+							<a
+								href="https://www.tiktok.com/@vico65_"
+								target="_blank"
+								class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
+							>
+								<svg
+									role="img"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+									class="fill-current"
+								>
+									<title>TikTok</title>
+									<path
+										d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- About Me Section End -->
+
+		<!-- Portofolio Section Start -->
+		<section id="portofolio" class="bg-slate-100 pt-20">
+			<div class="container">
+				<div class="w-full px-4">
+					<div class="max-w-xl mx-auto text-center mb-8">
+						<h3 class="text-primary font-semibold text-xl mb-2">
+							Portofolio
+						</h3>
+						<h2 class="text-dark font-bold text-2xl">
+							Project Terbaru
+						</h2>
+					</div>
+				</div>
+				<div class="w-full px-4 flex flex-wrap justify-center">
+					<div class="mb-6 p-4 md:w-1/2">
+						<div
+							class="rounded-md shadow-md overflow-hidden cursor-pointer hover:scale-110"
+						>
+							<img
+								src="res\images\titungan.jpg"
+								alt="Titungan"
+								class="w-full"
+							/>
+						</div>
+						<h3
+							class="font-semibold text-lg text-dark mt-5 mb-3 group"
+						>
+							<a
+								href="https://github.com/vico65/Titungan"
+								class="group-hover:text-primary"
+							>
+								Titungan Android Game</a
+							>
+						</h3>
+						<p
+							class="text-slate-500 text-base font-medium md:text-center"
+						>
+							Titungan merupakan game kasual berbasis android yang
+							dikembangkan menggunakan bahasa pemrograman kotlin
+							dengan framework jetpack compose
+						</p>
+					</div>
+
+					<div class="mb-6 p-4 md:w-1/2">
+						<div
+							class="rounded-md shadow-md overflow-hidden cursor-pointer hover:scale-110"
+						>
+							<img
+								src="res\images\sistem-pengelolaan-dokumen-perjalanan-dinas.png"
+								alt="sistem-pengelolaan-dokumen-perjalanan-dinas"
+								class="w-full"
+							/>
+						</div>
+						<h3
+							class="font-semibold text-lg text-dark mt-5 mb-3 group"
+						>
+							<a
+								href="https://github.com/vico65/Sistem-Pengelolaan-Dokumen-Perjalanan-Dinas"
+								class="group-hover:text-primary"
+								>Pengelolaan Dokumen Perjalanan Dinas</a
+							>
+						</h3>
+						<p
+							class="text-slate-500 text-base font-medium md:text-center"
+						>
+							Website pengelolaan dokumen perjalanan dinas
+							digunakan untuk melakukan pengelolaan dokumen
+							perjalanan dinas, dikembangkan TailwindCSS dan node
+							JS dengan framework ExpressJS pada server side,
+							menganut konsep MVC dalam pengembangannya serta
+							menggunakan monggoDB.
+						</p>
+					</div>
+
+					<div class="mb-12 p-4 md:w-1/2">
+						<div
+							class="rounded-md shadow-md overflow-hidden cursor-pointer hover:scale-110"
+						>
+							<img
+								src="res\images\akademik-unsri.png"
+								alt="Akademik Unsri"
+								class="w-full"
+							/>
+						</div>
+						<h3
+							class="font-semibold text-lg text-dark mt-5 mb-3 group"
+						>
+							<a
+								href="https://github.com/vico65/Akademik-Unsri"
+								class="group-hover:text-primary"
+								>Front End Akademik Unsri</a
+							>
+						</h3>
+						<p
+							class="text-slate-500 text-base font-medium md:text-center"
+						>
+							Front-end website dari akademik Universitas
+							Sriwijaya, dikembangkan menggunakan HTML, CSS dengan
+							framework TailwindCss, dan juga vanila javascript.
+							Dikembangkan menggunakan konsep Single Page
+							Application.
+						</p>
+					</div>
+
+					<div class="mb-12 p-4 md:w-1/2">
+						<div
+							class="rounded-md shadow-md overflow-hidden cursor-pointer hover:scale-110"
+						>
+							<img
+								src="res\images\portofolio.jpg"
+								alt="Titungan"
+								class="w-full"
+							/>
+						</div>
+						<h3 class="font-semibold text-lg text-dark mt-5 mb-3">
+							Portofolio
+						</h3>
+						<p
+							class="text-slate-500 text-base font-medium md:text-center"
+						>
+							Website portofolio saya, dikembangkan menggunakan
+							HTML, CSS dengan framework TailwindCSS, dan vanila
+							javascript.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Portofolio Section End -->
+
+		<!-- Blog Section Start -->
+		<section id="blog" class="pt-20 bg-slate-100">
+			<div class="container">
+				<div class="w-full px-4">
+					<div class="max-w-xl mx-auto text-center mb-8">
+						<h3 class="text-primary font-semibold text-xl mb-2">
+							Blog
+						</h3>
+						<h2 class="text-dark font-bold text-2xl">
+							Tulisan Terkini
+						</h2>
+					</div>
+					<div class="w-full px-4 flex flex-wrap justify-center">
+						<div class="mb-6 p-4 md:w-1/3 bg-white">
+							<div
+								class="rounded-md shadow-md overflow-hidden cursor-pointer hover:scale-110"
+							>
+								<img
+									src="res\images\blog1.avif"
+									alt="cara-cepat-hitung-pangkat-dua-digit"
+									class="w-full"
+								/>
+							</div>
+							<h3
+								class="font-semibold text-lg text-dark mt-5 mb-3 group"
+							>
+								<a
+									href="#"
+									class="group-hover:text-primary capitalize"
+									>Cara cepat hitung pangkat dua digit</a
+								>
+							</h3>
+							<p
+								class="text-slate-500 text-base font-medium text-left mb-3"
+							>
+								Blog ini sedang dalam pengembangan
+							</p>
+							<a
+								href="#"
+								class="bg-primary px-3 py-2 rounded-md text-white font-semibold hover:bg-primary/90 hover:shadow-md"
+								>Baca Selengkapnya</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Blog Section End  -->
+
+		<!-- Contact Section Start -->
+		<section id="contact" class="pt-20">
+			<div class="container">
+				<div class="max-w-xl mx-auto text-center mb-8">
+					<h3 class="text-primary font-semibold text-xl mb-2">
+						Contact
+					</h3>
+					<h2 class="text-dark font-bold text-2xl">Hubungi Saya</h2>
+				</div>
+			</div>
+
+			<form>
+				<div class="w-full px-4 mb-8 md:w-1/3 md:mx-auto">
+					<div class="w-full mb-5 px-4">
+						<label for="nama" class="text-primary font-semibold"
+							>Nama</label
+						>
+						<input
+							id="nama"
+							type="text"
+							class="w-full h-10 bg-slate-100 rounded-md shadow-sm"
+						/>
+					</div>
+
+					<div class="w-full mb-5 px-4">
+						<label for="email" class="text-primary font-semibold"
+							>Email</label
+						>
+						<input
+							id="nama"
+							type="email"
+							class="w-full h-10 bg-slate-100 rounded-md shadow-sm"
+						/>
+					</div>
+
+					<div class="w-full mb-5 px-4">
+						<label for="nama" class="text-primary font-semibold"
+							>Pesan</label
+						>
+						<textarea
+							name="nama"
+							id="nama"
+							class="w-full h-32 bg-slate-100 rounded-md shadow-sm"
+						></textarea>
+					</div>
+
+					<div class="w-full mb-5 px-4">
+						<button
+							type="button"
+							class="bg-primary px-3 py-2 rounded-md text-white font-semibold hover:bg-primary/90 hover:shadow-md w-full"
+						>
+							Kirim
+						</button>
+					</div>
+				</div>
+			</form>
+		</section>
+		<!-- Contact Section End -->
+
+		<!-- Footer Section Start -->
+		<section id="footer" class="pt-20 bg-dark text-slate-300 text-base pb-12">
+			<div class="container">
+				<div class="flex flex-wrap">
+					<div class="w-full mb-8 px-4 font-medium md:w-1/3">
+						<h2 class="font-bold text-2xl mb-5 text-white">
+							Alvico
+						</h2>
+						<h3 class="font-bold text-xl mb-2">Hubungi Saya</h3>
+						<p>alvicojr65@gmail.com</p>
+						<p>Palembang</p>
+					</div>
+                    <div class="w-full mb-8 px-4 font-medium md:w-1/3">
+						<h3 class="font-semibold text-lg mb-5 text-white">Kategori Tulisan</h3>
+						<ul>
+                            <li>
+                                <a href="#" class="inline-block mb-3">Matematika</a>
+                            </li>
+                            <li>
+                                <a href="#" class="inline-block mb-3">Movie</a>
+                            </li>
+                            <li>
+                                <a href="#" class="inline-block mb-3">Programming</a>
+                            </li>
+                        </ul>
+					</div>
+                    <div class="w-full mb-8 px-4 font-medium md:w-1/3">
+						<h3 class="font-semibold text-lg mb-5 text-white">Tautan</h3>
+						<ul>
+                            <li>
+                                <a href="#hero" class="inline-block mb-3">Beranda</a>
+                            </li>
+                            <li>
+                                <a href="#about" class="inline-block mb-3">Tentang Saya</a>
+                            </li>
+                            <li>
+                                <a href="#portofolio" class="inline-block mb-3">Portofolio</a>
+                            </li>
+                            <li>
+                                <a href="#blog" class="inline-block mb-3">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="inline-block mb-3">Contact</a>
+                            </li>
+                        </ul>
+					</div>
+                    
+				</div>
+
+                <div class="w-full pt-10 border-t border-slate-800">
+                    <div class="flex items-center justify-center mb-10">
+                        <!-- Linked In -->
                         <a
-                            href="#home"
-                            class="font-bold self-center text-base sm:text-lg text-sky-500 dark:text-slate-300 py-4 block"
-                            >Alvico</a
+                            href="http://www.linkedin.com/in/alvico65"
+                            target="_blank"
+                            class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
                         >
-                    </div>
-
-                    <!-- Menu list -->
-                    <div class="flex items-center px-4">
-                        <button
-                            id="hamburger-menu"
-                            name="hamburger-menu"
-                            type="button"
-                            class="block absolute right-4 sm:hidden group"
-                        >
-                            <span
-                                class="hamburger-line origin-top-left group-hover:bg-sky-500 transition duration-300 ease-in-out"
-                            ></span>
-                            <span
-                                class="hamburger-line group-hover:bg-sky-500 transition duration-300 ease-in-out"
-                            ></span>
-                            <span
-                                class="hamburger-line origin-bottom-left group-hover:bg-sky-500 transition duration-300 ease-in-out"
-                            ></span>
-                        </button>
-
-                        <nav
-                            id="nav-menu"
-                            class="absolute max-w-[250px] py-5 shadow-lg rounded-lg w-full right-4 top-full hidden lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
-                        >
-                            <ul class="block lg:flex">
-                                <li class="group">
-                                    <a
-                                        href="#"
-                                        class="font-semibold group-hover:text-primary md:group-hover:bg-cyan-500 px-2 py-1 rounded-lg dark:hover:bg-slate-800 dark:text-slate-300"
-                                    >
-                                        Tentang Saya
-                                    </a>
-                                </li>
-                                <li class="group">
-                                    <a
-                                        href="#"
-                                        class="font-semibold group-hover:text-primary md:group-hover:bg-cyan-500 px-2 py-1 rounded-lg dark:hover:bg-slate-800 dark:text-slate-300"
-                                    >
-                                        Portofolio
-                                    </a>
-                                </li>
-                                <li class="group">
-                                    <a
-                                        href="#"
-                                        class="font-semibold group-hover:text-primary md:group-hover:bg-cyan-500 px-2 py-1 rounded-lg dark:hover:bg-slate-800 dark:text-slate-300"
-                                    >
-                                        Blog
-                                    </a>
-                                </li>
-                                <li class="group">
-                                    <a
-                                        href="#"
-                                        class="font-semibold group-hover:text-primary md:group-hover:bg-cyan-500 px-2 py-1 rounded-lg dark:hover:bg-slate-800 dark:text-slate-300"
-                                    >
-                                        Kontak
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- Hero Section Start -->
-        <section id="hero" class="pt-24">
-            <div class="container">
-                <div class="flex flex-wrap">
-                    <div class="w-full lg:w-1/2 self-center px-4">
-                        <h1
-                            class="text-primary py-1 text-base font-semibold md:text-xl"
-                        >
-                            Halo Semua👋, Saya
-                            <span
-                                class="text-dark text-4xl lg:text-5xl font-bold block"
-                                >Alvico</span
+                            <svg
+                                width="24"
+                                height="24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                viewBox="0 0 24 24"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                xmlns="http://www.w3.org/2000/svg"
                             >
-                        </h1>
-                        <h2
-                            class="font-medium text-slate-500 text-lg lg:text-2xl py-1 mb-5"
-                        >
-                            Junior Software
-                            <span class="text-secondary font-semibold"
-                                >Developer</span
-                            >
-                        </h2>
-                        <p
-                            class="font-medium leading-relaxed capitalize py-1 text-slate-400 mb-10"
-                        >
-                            Math enthusiast, movie lover, and football fan -
-                            visca barca 🔵🔴
-                        </p>
+                                <path
+                                    d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm5-1.775v.5"
+                                />
+                                <path
+                                    d="M8 16.375V10.75m4 5.625V13.5m0 0v-2.75m0 2.75c0-1.288 1.222-2 2.4-2 1.6 0 1.6 1.375 1.6 2.875v2"
+                                />
+                            </svg>
+                        </a>
 
+                        <!-- Github -->
                         <a
-                            href="#"
-                            class="py-3 px-6 text-base font-semibold bg-sky-500 rounded-full text-white hover:bg-sky-400 hover:shadow-lg transition duration-300 ease-in-out"
-                            >Hubungi Saya
+                            href="https://github.com/vico65"
+                            target="_blank"
+                            class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
+                        >
+                            <svg
+                                width="24"
+                                height="24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                viewBox="0 0 24 24"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M3.5 15.668q.675.081 1 .618c.326.537 1.537 2.526 2.913 2.526H9.5m5.672-3.513q.823 1.078.823 1.936V21m-5.625-5.609q-.87.954-.869 1.813V21"
+                                />
+                                <path
+                                    d="M15.172 15.299c1.202-.25 2.293-.682 3.14-1.316 1.448-1.084 2.188-2.758 2.188-4.411 0-1.16-.44-2.243-1.204-3.16-.425-.511.819-3.872-.286-3.359-1.105.514-2.725 1.198-3.574.947-.909-.268-1.9-.416-2.936-.416-.9 0-1.766.111-2.574.317-1.174.298-2.296-.363-3.426-.848-1.13-.484-.513 3.008-.849 3.422C4.921 7.38 4.5 8.44 4.5 9.572c0 1.653.895 3.327 2.343 4.41.965.722 2.174 1.183 3.527 1.41"
+                                />
+                            </svg>
+                        </a>
+
+                        <!-- Instagram 1 -->
+                        <a
+                            href="https://www.instagram.com/vico65_/"
+                            target="_blank"
+                            class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
+                        >
+                            <svg
+                                width="24"
+                                height="24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                viewBox="0 0 24 24"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm14-2.9h.5"
+                                />
+                                <path
+                                    d="M15.462 11.487a3.5 3.5 0 1 1-6.925 1.026 3.5 3.5 0 0 1 6.925-1.026"
+                                />
+                            </svg>
+                        </a>
+
+                        <!-- Instagram 2 -->
+                        <a
+                            href="https://www.instagram.com/bjismangk0/"
+                            target="_blank"
+                            class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
+                        >
+                            <svg
+                                width="24"
+                                height="24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                viewBox="0 0 24 24"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm14-2.9h.5"
+                                />
+                                <path
+                                    d="M15.462 11.487a3.5 3.5 0 1 1-6.925 1.026 3.5 3.5 0 0 1 6.925-1.026"
+                                />
+                            </svg>
+                        </a>
+
+                        <!-- Facebook -->
+                        <a
+                            href="https://www.facebook.com/alvico.casilas/"
+                            target="_blank"
+                            class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
+                        >
+                            <svg
+                                width="24"
+                                height="24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                viewBox="0 0 24 24"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M6.5 10v4h3v7h4v-7h3l1-4h-4V8c0-.545.455-1 1-1h3V3h-3c-2.723 0-5 2.277-5 5v2z"
+                                />
+                            </svg>
+                        </a>
+
+                        <!-- TikTok -->
+                        <a
+                            href="https://www.tiktok.com/@vico65_"
+                            target="_blank"
+                            class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
+                        >
+                            <svg
+                                role="img"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="fill-current"
+                            >
+                                <title>TikTok</title>
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                                />
+                            </svg>
                         </a>
                     </div>
-                    <div class="w-full lg:w-1/2 self-end px-4">
-                        <div class="mt-10 lg:mt-0">
-                            <img
-                                src="res\images\alvico-bg.png"
-                                alt="alvico image"
-                                class="max-w-full mx-auto rounded-full shadow-lg scale-90 lg:scale-75"
-                            />
-                        </div>
-                    </div>
+                    <p class="text-xs font-medium text-slate-500 text-center">Dibuat oleh Alvico menggunakan TailwindCSS 3</p>
                 </div>
-            </div>
-        </section>
-        <!-- Hero Section End -->
+			</div>
+		</section>
+		<!-- Footer Section End -->
+	</body>
 
-        <!-- About Me Section Start -->
-        <section id="about" class="pt-16 lg:pt-16">
-            <div class="container">
-                <div class="flex flex-wrap">
-                    <div class="w-full lg:w-1/2 px-4 mb-10">
-                        <h3
-                            class="text-sky-500 font-bold text-lg uppercase mb-2"
-                        >
-                            Tentang Saya
-                        </h3>
-                        <p
-                            class="text-pretty text-slate-500 max-w-xl font-medium"
-                        >
-                            Saya Alvico, lulusan S1 Jurusan Sistem Informasi
-                            Universitas Sriwijaya 2024, yang saat ini tinggal di
-                            Palembang. Saya telah menyelesaikan perjalanan
-                            kuliah saya dengan sukses dan sedang fokus pada
-                            pengembangan karir di dunia teknologi informasi.
-                            Saat ini, saya terbuka untuk bekerja.
-                        </p>
-                    </div>
-                    <div class="w-full lg:w-1/2 px-4">
-                        <h3 class="font-semibold text-base mb-2">
-                            Mari Berteman
-                        </h3>
-                        <p class="font-medium text-slate-500 mb-4">
-                            Untuk mengetahui lebih lanjut tentang saya secara
-                            personal baik pengalaman ataupun hobi, silakan
-                            kunjungi sosial media saya:
-                        </p>
-                        <div class="flex items-center mb-10">
-                            <!-- Linked In -->
-                            <a
-                                href="http://www.linkedin.com/in/alvico65"
-                                target="_blank"
-                                class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
-                            >
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                    viewBox="0 0 24 24"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm5-1.775v.5"
-                                    />
-                                    <path
-                                        d="M8 16.375V10.75m4 5.625V13.5m0 0v-2.75m0 2.75c0-1.288 1.222-2 2.4-2 1.6 0 1.6 1.375 1.6 2.875v2"
-                                    />
-                                </svg>
-                            </a>
-
-                            <!-- Github -->
-                            <a
-                                href="https://github.com/vico65"
-                                target="_blank"
-                                class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
-                            >
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                    viewBox="0 0 24 24"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M3.5 15.668q.675.081 1 .618c.326.537 1.537 2.526 2.913 2.526H9.5m5.672-3.513q.823 1.078.823 1.936V21m-5.625-5.609q-.87.954-.869 1.813V21"
-                                    />
-                                    <path
-                                        d="M15.172 15.299c1.202-.25 2.293-.682 3.14-1.316 1.448-1.084 2.188-2.758 2.188-4.411 0-1.16-.44-2.243-1.204-3.16-.425-.511.819-3.872-.286-3.359-1.105.514-2.725 1.198-3.574.947-.909-.268-1.9-.416-2.936-.416-.9 0-1.766.111-2.574.317-1.174.298-2.296-.363-3.426-.848-1.13-.484-.513 3.008-.849 3.422C4.921 7.38 4.5 8.44 4.5 9.572c0 1.653.895 3.327 2.343 4.41.965.722 2.174 1.183 3.527 1.41"
-                                    />
-                                </svg>
-                            </a>
-
-                            <!-- Instagram 1 -->
-                            <a
-                                href="https://www.instagram.com/vico65_/"
-                                target="_blank"
-                                class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
-                            >
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                    viewBox="0 0 24 24"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm14-2.9h.5"
-                                    />
-                                    <path
-                                        d="M15.462 11.487a3.5 3.5 0 1 1-6.925 1.026 3.5 3.5 0 0 1 6.925-1.026"
-                                    />
-                                </svg>
-                            </a>
-
-                            <!-- Instagram 2 -->
-                            <a
-                                href="https://www.instagram.com/bjismangk0/"
-                                target="_blank"
-                                class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
-                            >
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                    viewBox="0 0 24 24"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm14-2.9h.5"
-                                    />
-                                    <path
-                                        d="M15.462 11.487a3.5 3.5 0 1 1-6.925 1.026 3.5 3.5 0 0 1 6.925-1.026"
-                                    />
-                                </svg>
-                            </a>
-
-                            <!-- Facebook -->
-                            <a
-                                href="https://www.facebook.com/alvico.casilas/"
-                                target="_blank"
-                                class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
-                            >
-                                <svg
-                                    width="24"
-                                    height="24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                    viewBox="0 0 24 24"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M6.5 10v4h3v7h4v-7h3l1-4h-4V8c0-.545.455-1 1-1h3V3h-3c-2.723 0-5 2.277-5 5v2z"
-                                    />
-                                </svg>
-                            </a>
-
-                            <!-- TikTok -->
-                            <a
-                                href="https://www.tiktok.com/@vico65_"
-                                target="_blank"
-                                class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 mr-3 text-slate-300 hover:text-primary hover:border-primary hover:scale-110 transition duration-200 ease-in-out"
-                            >
-                                <svg
-                                    role="img"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="fill-current"
-                                >
-                                    <title>TikTok</title>
-                                    <path
-                                        d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
-                                    />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- About Me Section End -->
-
-        <!-- Portofolio Section Start -->
-        <section id="portofolio" class="bg-slate-100 pt-20">
-            <div class="container">
-                <div class="w-full px-4">
-                    <div class="max-w-xl mx-auto text-center mb-8">
-                        <h3 class="text-primary font-semibold text-xl mb-2">
-                            Portofolio
-                        </h3>
-                        <h2 class="text-dark font-bold text-2xl">
-                            Project Terbaru
-                        </h2>
-                    </div>
-                </div>
-                <div class="w-full px-4 flex flex-wrap justify-center">
-                    <div class="mb-6 p-4 md:w-1/2">
-                        <div
-                            class="rounded-md shadow-md overflow-hidden cursor-pointer hover:scale-110"
-                        >
-                            <img
-                                src="res\images\titungan.jpg"
-                                alt="Titungan"
-                                class="w-full"
-                            />
-                        </div>
-                        <h3 class="font-semibold text-lg text-dark mt-5 mb-3 group">
-                            <a href="https://github.com/vico65/Titungan" class="group-hover:text-primary"> Titungan Android Game</a>
-                        </h3>
-                        <p
-                            class="text-slate-500 text-base font-medium md:text-center"
-                        >
-                            Titungan merupakan game kasual berbasis android yang
-                            dikembangkan menggunakan bahasa pemrograman kotlin
-                            dengan framework jetpack compose
-                        </p>
-                    </div>
-
-                    <div class="mb-6 p-4 md:w-1/2">
-                        <div
-                            class="rounded-md shadow-md overflow-hidden cursor-pointer hover:scale-110"
-                        >
-                            <img
-                                src="res\images\sistem-pengelolaan-dokumen-perjalanan-dinas.png"
-                                alt="sistem-pengelolaan-dokumen-perjalanan-dinas"
-                                class="w-full"
-                            />
-                        </div>
-                        <h3 class="font-semibold text-lg text-dark mt-5 mb-3 group">
-                            <a href="https://github.com/vico65/Sistem-Pengelolaan-Dokumen-Perjalanan-Dinas" class="group-hover:text-primary">Pengelolaan Dokumen Perjalanan Dinas</a>
-                            
-                        </h3>
-                        <p
-                            class="text-slate-500 text-base font-medium md:text-center"
-                        >
-                            Website pengelolaan dokumen perjalanan dinas
-                            digunakan untuk melakukan pengelolaan dokumen
-                            perjalanan dinas, dikembangkan TailwindCSS dan node
-                            JS dengan framework ExpressJS pada server side,
-                            menganut konsep MVC dalam pengembangannya serta
-                            menggunakan monggoDB.
-                        </p>
-                    </div>
-
-                    <div class="mb-12 p-4 md:w-1/2">
-                        <div
-                            class="rounded-md shadow-md overflow-hidden cursor-pointer hover:scale-110"
-                        >
-                            <img
-                                src="res\images\akademik-unsri.png"
-                                alt="Akademik Unsri"
-                                class="w-full"
-                            />
-                        </div>
-                        <h3 class="font-semibold text-lg text-dark mt-5 mb-3 group">
-                            <a href="https://github.com/vico65/Akademik-Unsri" class="group-hover:text-primary">Front End Akademik Unsri</a>
-                            
-                        </h3>
-                        <p
-                            class="text-slate-500 text-base font-medium md:text-center"
-                        >
-                            Front-end website dari akademik Universitas
-                            Sriwijaya, dikembangkan menggunakan HTML, CSS dengan
-                            framework TailwindCss, dan juga vanila javascript.
-                            Dikembangkan menggunakan konsep Single Page
-                            Application.
-                        </p>
-                    </div>
-
-                    <div class="mb-12 p-4 md:w-1/2">
-                        <div
-                            class="rounded-md shadow-md overflow-hidden cursor-pointer hover:scale-110"
-                        >
-                            <img
-                                src="res\images\portofolio.jpg"
-                                alt="Titungan"
-                                class="w-full"
-                            />
-                        </div>
-                        <h3 class="font-semibold text-lg text-dark mt-5 mb-3">
-                            Portofolio
-                        </h3>
-                        <p
-                            class="text-slate-500 text-base font-medium md:text-center"
-                        >
-                            Website portofolio saya, dikembangkan menggunakan
-                            HTML, CSS dengan framework TailwindCSS, dan vanila
-                            javascript.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Portofolioo Section End -->
-
-        <!-- Blog Section Start -->
-        <section id="blog" class="pt-20 bg-slate-100">
-            <div class="container">
-                <div class="w-full px-4">
-                    <div class="max-w-xl mx-auto text-center mb-8">
-                        <h3 class="text-primary font-semibold text-xl mb-2">
-                            Blog
-                        </h3>
-                        <h2 class="text-dark font-bold text-2xl">
-                            Tulisan Terkini
-                        </h2>
-                    </div>
-                    <div class="w-full px-4 flex flex-wrap justify-center">
-                        <div class="mb-6 p-4 md:w-1/3 bg-white">
-                            <div
-                                class="rounded-md shadow-md overflow-hidden cursor-pointer hover:scale-110  "
-                            >
-                                <img
-                                    src="res\images\blog1.avif"
-                                    alt="cara-cepat-hitung-pangkat-dua-digit"
-                                    class="w-full"
-                                />
-                            </div>
-                            <h3 class="font-semibold text-lg text-dark mt-5 mb-3 group">
-                                <a href="#" class="group-hover:text-primary capitalize">Cara cepat hitung pangkat dua digit</a>
-                            </h3>
-                            <p
-                                class="text-slate-500 text-base font-medium text-left mb-3"
-                            >
-                                Blog ini sedang dalam pengembangan
-                            </p>
-                            <a href="#" class="bg-primary px-3 py-2 rounded-md text-white font-semibold hover:bg-primary/90 hover:shadow-md ">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Blog Section End  -->
-    </body>
-
-    <script src="public\js\script.js"></script>
+	<script src="public\js\script.js"></script>
 </html>
