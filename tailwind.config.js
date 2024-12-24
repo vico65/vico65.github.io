@@ -9,7 +9,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        jetbrains_mono : ['JetBrains Mono']
+        primary : ['JetBrains Mono'],
+        secondary : ['Poppins']
       },
       colors: {
         dark : '#0f172a',
