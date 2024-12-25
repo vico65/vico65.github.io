@@ -33,7 +33,7 @@
 			class="w-full absolute top-0 left-0 z-10 dark:bg-dark bg-transparent flex items-center"
 		>
 			<div class="container">
-				<div class="flex items-center justify-between relative">
+				<div class="flex items-center justify-between relative ">
 					<!-- judul -->
 					<div class="px-4">
 						<a
@@ -44,7 +44,7 @@
 					</div>
 
 					<!-- Menu list -->
-					<div class="flex items-center px-4">
+					<div class="flex items-center px-4 lg:w-1/2  ">
 						<button
 							id="hamburger-menu"
 							name="hamburger-menu"
@@ -64,47 +64,53 @@
 
 						<nav
 							id="nav-menu"
-							class="absolute max-w-[250px] py-4 shadow-lg font-medium bg-white rounded-lg w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+							class="absolute max-w-[250px] py-2 border-4 lg:border-0 border-dark font-medium bg-white rounded-sm w-full top-full right-4 translate-x-full transition duration-300 ease-in-out invisible lg:flex lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:justify-between "
 						>
-							<ul class="block lg:flex">
-								<li class="group">
+							<ul class="block lg:flex lg:justify-between lg:w-[75%] ">
+								<li class="group pb-1 lg:pb-0">
 									<a
-										href="#"
-										class="group-hover:text-primary md:group-hover:text-dark md:group-hover:border-b-2 md:group-hover:border-primary  px-2 py-1 dark:hover:bg-slate-800 dark:text-slate-300 "
+										href="#about"
+										class="px-2 py-1 nav-not-active"
 									>
 										Tentang Saya
 									</a>
+									<!-- <div id="loading-bar" class="bg-blue-500  rounded-full h-[3px] w-0">
+									</div> -->
 								</li>
-								<li class="group">
+								<li class="group pb-1 lg:pb-0">
 									<a
-										href="#"
-										class=" group-hover:text-primary md:group-hover:bg-cyan-500 px-2 py-1 rounded-lg dark:hover:bg-slate-800 dark:text-slate-300"
+										href="#portofolio"
+										class="px-2 py-1 nav-not-active"
 									>
 										Portofolio
 									</a>
 								</li>
-								<li class="group">
+								<li class="group pb-1 lg:pb-0">
 									<a
-										href="#"
-										class="font-semibold group-hover:text-primary md:group-hover:bg-cyan-500 px-2 py-1 rounded-lg dark:hover:bg-slate-800 dark:text-slate-300"
+										href="#blog"
+										class="px-2 py-1 nav-not-active"
 									>
 										Blog
 									</a>
 								</li>
-								<li class="group">
+								<li class="group pb-1 lg:pb-0">
 									<a
-										href="#"
-										class="font-semibold group-hover:text-primary md:group-hover:bg-cyan-500 px-2 py-1 rounded-lg dark:hover:bg-slate-800 dark:text-slate-300"
+										href="#contact"
+										class="px-2 py-1 hover:border-primary hover:border-b-[3px]"
 									>
 										Kontak
 									</a>
 								</li>
-								<li>
-									<a
-									href="#"
-									class="font-jetbrains_mono font-semibold flex self-center hover:bg-cyan-100 px-2 py-1 rounded-lg dark:hover:bg-slate-800"
+							</ul>
+
+							<div class="flex lg:justify-self-end">
+								<a
+									href="https://github.com/vico65"
+									class="px-2 group"
 								>
-									<div class="text-2xl dark:text-slate-50">
+									<div
+										class="text-2xl group-hover:text-primary group-hover:scale-110"
+									>
 										<svg
 											width="24"
 											height="24"
@@ -125,12 +131,11 @@
 										</svg>
 									</div>
 								</a>
-								</li>
-								
+
 								<button
 									id="toggle-theme-button"
 									type="button"
-									class="hover:bg-cyan-100 px-1 rounded-lg py-1 dark:hover:bg-slate-800"
+									class="hover:bg-cyan-100 px-1 rounded-lg dark:hover:bg-slate-800"
 								>
 									<div
 										id="toggle-theme-icon"
@@ -160,15 +165,15 @@
 										</svg>
 									</div>
 								</button>
-							</ul>
+							</div>
 						</nav>
 					</div>
 				</div>
 			</div>
 		</header>
 
-		<!-- Hero Section Start -->
-		<section id="hero" class="pt-24">
+		<!-- home Section Start -->
+		<section id="home" class="pt-24">
 			<div class="container">
 				<div class="flex flex-wrap">
 					<div class="w-full lg:w-1/2 self-center px-4">
@@ -214,7 +219,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- Hero Section End -->
+		<!-- home Section End -->
 
 		<!-- About Me Section Start -->
 		<section id="about" class="pt-16 lg:pt-16">
@@ -680,7 +685,7 @@
 						</h3>
 						<ul>
 							<li>
-								<a href="#hero" class="inline-block mb-3"
+								<a href="#home" class="inline-block mb-3"
 									>Beranda</a
 								>
 							</li>

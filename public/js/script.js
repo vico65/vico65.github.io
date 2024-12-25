@@ -11,6 +11,10 @@ window.onscroll = function() {
    
 }
 
+
+  
+
+
 // membuat variabel
 let toggleThemeButton = document.getElementById("toggle-theme-button");
 let lightModeIcon = document.getElementById("light-mode-icon"); // light mode = sun
@@ -29,8 +33,34 @@ let navbarMenu = document.getElementById('nav-menu');
 //menjalankan listener ketika tombol hamburger ditekan
 hamburgerMenuButton.addEventListener('click', () => {
    hamburgerMenuButton.classList.toggle('hamburger-active');
-   navbarMenu.classList.toggle('hidden');
+   navbarMenu.classList.toggle('invisible');
+   navbarMenu.classList.toggle('translate-x-0');
+   navbarMenu.classList.toggle('translate-x-full');
+
+
 });
+
+// fitur ada garis loading di bawah navbar
+// let progress = 0;
+// const loadingBar = document.getElementById("loading-bar");
+
+// let coba = document.getElementById('coba');
+// coba.addEventListener('mouseover', () => {
+// progress = 0;
+// const interval = setInterval(() => {
+//    if (progress >= 90) {
+//       clearInterval(interval);
+//    } else {
+//       progress += 2;
+
+//       loadingBar.style.width = `${progress}%`;
+//    }
+//    }, 1);
+// })
+
+// coba.addEventListener('mouseout', () => {
+// loadingBar.style.width = `0%`
+// })
 
 
 

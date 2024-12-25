@@ -10,13 +10,21 @@ body {
    font-family: 'Inter', sans-serif;
 } */
 
+.nav-active {
+   @apply md:border-primary md:border-b-[3px]
+}
+
+.nav-not-active {
+   @apply group-hover:text-primary  md:group-hover:text-dark md:group-hover:border-primary md:group-hover:border-b-[3px]
+}
+
 .navbar-fixed {
    @apply z-50 fixed bg-white bg-opacity-80 backdrop-blur-[1px];
    box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1)
 }
 
 .hamburger-line {
-   @apply w-[30px] h-[2px] bg-dark my-2 block;
+   @apply w-[33px] h-[3px] bg-dark my-2 block;
 }
 
 .hamburger-active > span:nth-child(1) {
