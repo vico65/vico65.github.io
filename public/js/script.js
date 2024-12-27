@@ -1,3 +1,5 @@
+
+
 //membuat navbar fixed by sandhika
 window.onscroll = function() {
    const header = document.querySelector('header');
@@ -33,12 +35,15 @@ let navbarMenu = document.getElementById('nav-menu');
 //menjalankan listener ketika tombol hamburger ditekan
 hamburgerMenuButton.addEventListener('click', () => {
    hamburgerMenuButton.classList.toggle('hamburger-active');
-   navbarMenu.classList.toggle('invisible');
+   navbarMenu.classList.toggle('opacity-0');
+   navbarMenu.classList.toggle('opacity-100');
    navbarMenu.classList.toggle('translate-x-0');
-   navbarMenu.classList.toggle('translate-x-full');
-
-
+   navbarMenu.classList.toggle('translate-x-[120%]');
 });
+
+
+
+
 
 // fitur ada garis loading di bawah navbar
 // let progress = 0;

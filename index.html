@@ -28,12 +28,12 @@
 		<link href="output.css" rel="stylesheet" />
 		<title>Alvico</title>
 	</head>
-	<body>
+	<body class="overflow-x-hidden">
 		<header
 			class="w-full absolute top-0 left-0 z-10 dark:bg-dark bg-transparent flex items-center"
 		>
 			<div class="container">
-				<div class="flex items-center justify-between relative ">
+				<div class="flex items-center justify-between relative">
 					<!-- judul -->
 					<div class="px-4">
 						<a
@@ -44,7 +44,7 @@
 					</div>
 
 					<!-- Menu list -->
-					<div class="flex items-center px-4 lg:w-1/2  ">
+					<div class="flex items-center px-4 lg:w-1/2">
 						<button
 							id="hamburger-menu"
 							name="hamburger-menu"
@@ -64,9 +64,11 @@
 
 						<nav
 							id="nav-menu"
-							class="absolute max-w-[250px] py-2 border-4 lg:border-0 border-dark font-medium bg-white rounded-sm w-full top-full right-4 translate-x-full transition duration-300 ease-in-out invisible lg:flex lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:justify-between "
+							class="absolute max-w-[250px] py-2 border-4 lg:border-0 border-dark font-medium bg-white rounded-sm w-full top-full right-4 translate-x-[120%] lg:translate-x-0 transition duration-300 ease-in-out opacity-0 lg:opacity-100 lg:flex lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:justify-between"
 						>
-							<ul class="block lg:flex lg:justify-between lg:w-[75%] ">
+							<ul
+								class="block lg:flex lg:justify-between lg:w-[75%]"
+							>
 								<li class="group pb-1 lg:pb-0">
 									<a
 										href="#about"
@@ -96,7 +98,7 @@
 								<li class="group pb-1 lg:pb-0">
 									<a
 										href="#contact"
-										class="px-2 py-1 hover:border-primary hover:border-b-[3px]"
+										class="px-2 py-1 nav-not-active"
 									>
 										Kontak
 									</a>
@@ -116,7 +118,7 @@
 											height="24"
 											fill="none"
 											stroke="currentColor"
-											stroke-width="1.5"
+											stroke-width="2"
 											viewBox="0 0 24 24"
 											stroke-linecap="round"
 											stroke-linejoin="round"
@@ -135,18 +137,18 @@
 								<button
 									id="toggle-theme-button"
 									type="button"
-									class="hover:bg-cyan-100 px-1 rounded-lg dark:hover:bg-slate-800"
+									class="px-2 group"
 								>
 									<div
 										id="toggle-theme-icon"
-										class="text-2xl dark:text-slate-50"
+										class="text-2xl group-hover:text-primary group-hover:scale-110"
 									>
 										<svg
 											width="24"
 											height="24"
 											fill="none"
 											stroke="currentColor"
-											stroke-width="1.5"
+											stroke-width="2"
 											viewBox="0 0 24 24"
 											stroke-linecap="round"
 											stroke-linejoin="round"
@@ -178,21 +180,24 @@
 				<div class="flex flex-wrap">
 					<div class="w-full lg:w-1/2 self-center px-4">
 						<h1
-							class="text-primary py-1 text-base font-semibold md:text-xl"
+							class="text-primary py-1 text-base font-semibold md:text-xl "
 						>
 							Halo Semua👋, Saya
 							<span
-								class="text-dark text-4xl lg:text-5xl font-bold block"
+								class="text-dark text-4xl lg:text-5xl font-extrabold block font-primary"
 								>Alvico</span
 							>
 						</h1>
 						<h2
 							class="font-medium text-slate-500 text-lg lg:text-2xl py-1 mb-5"
 						>
-							Junior Software
-							<span class="text-secondary font-semibold"
-								>Developer</span
-							>
+							Junior
+							<span class="title-capt typing text-secondary font-semibold"
+								></span
+							> 
+							<span class="title-capt typing2  hidden text-cyan-500 font-semibold"
+								></span
+							> 
 						</h2>
 						<p
 							class="font-medium leading-relaxed capitalize py-1 text-slate-400 mb-10"
@@ -873,4 +878,7 @@
 	</body>
 
 	<script src="public\js\script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+	<script src="public\js\gsap.js"></script>
 </html>
