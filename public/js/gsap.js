@@ -6,7 +6,7 @@ var titleCaptionStrings = ["Software Developer","Frontend Developer"]
 
 const typingAnimation = (kelas) =>
     gsap.to(kelas, {
-        duration : 2, 
+        duration : 1, 
         text :titleCaptionStrings[activeClass],
         yoyo: true,
         repeat: 1,
@@ -22,4 +22,4 @@ typingAnimation(titleCaptions[0])
 setInterval(() => {
     activeClass = activeClass == 1 ? 0 : 1
     typingAnimation(titleCaptions[activeClass], activeClass)
-}, 4000)
+}, 2000)
