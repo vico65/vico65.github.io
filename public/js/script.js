@@ -13,10 +13,6 @@ window.onscroll = function() {
    
 }
 
-
-  
-
-
 // membuat variabel
 let toggleThemeButton = document.getElementById("toggle-theme-button");
 let lightModeIcon = document.getElementById("light-mode-icon"); // light mode = sun
@@ -40,6 +36,20 @@ hamburgerMenuButton.addEventListener('click', () => {
    navbarMenu.classList.toggle('translate-x-0');
    navbarMenu.classList.toggle('translate-x-[120%]');
 });
+
+//mengubah warna blob saat di hover
+let primaryColor = "#0ea5e9"
+let secondaryColor = "#f43f5e"
+let heroImage = document.querySelector('.hero-image')
+let blob = document.querySelector('.blob svg path')
+
+heroImage.addEventListener('mouseover', () => {
+   blob.setAttribute('fill', secondaryColor)
+})
+
+heroImage.addEventListener('mouseout', () => {
+   blob.setAttribute('fill', primaryColor)
+})
 
 
 

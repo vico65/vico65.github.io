@@ -38,3 +38,23 @@ body {
 .hamburger-active > span:nth-child(3) {
    @apply  -rotate-45 ;
 }
+
+.blink-animation {
+   animation : blink 1s ease infinite;
+}
+
+.texture {
+   background-image: url("res/images/texture/cubes.png");
+}
+
+@keyframes blink {
+   0% {
+   opacity: 1;
+   }
+   50% {
+   opacity: 0;
+   }
+   100% {
+   opacity: 1;
+   }
+}
