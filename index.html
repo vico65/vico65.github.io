@@ -67,12 +67,14 @@
 							class="absolute max-w-[250px] py-2 border-4 lg:border-0 border-dark font-medium bg-white rounded-sm w-full top-full right-4 translate-x-[120%] lg:translate-x-0 transition duration-300 ease-in-out opacity-0 lg:opacity-100 lg:flex lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:justify-between"
 						>
 							<ul
-								class="block lg:flex lg:justify-between lg:w-[75%]"
+								class="block lg:flex lg:justify-between lg:w-[75%] "
 							>
-								<li class="group pb-1 lg:pb-0">
+								<li class="group pb-1 lg:pb-0 relative">
 									<a
 										href="#about"
-										class="px-2 py-1 nav-not-active"
+										class="px-2 py-1 w-full  lg:before:absolute lg:before:-bottom-1 lg:before:w-full lg:before:h-1 lg:before:bg-primary lg:before:rounded-full
+										lg:before:scale-x-0 lg:before:transition lg:before:duration-300 lg:before:ease-linear lg:before:origin-left
+										group-hover:lg:before:scale-x-100"
 									>
 										Tentang Saya
 									</a>
@@ -308,28 +310,27 @@
 				<div class="w-full px-4">
 					<div class="max-w-xl mx-auto text-center mb-10">
 						<h3
-							class="font-primary font-bold text-3xl lg:text-4xl mb-2 relative lg:w-fit lg:mx-auto flex justify-center" 
+							class="font-primary font-bold text-2xl lg:text-3xl mb-2 relative lg:w-fit lg:mx-auto flex justify-center"
 						>
 							<span
-								class="absolute bottom-0 -z-20 h-6 w-3/4 lg:w-full -translate-x-3 -rotate-2 rounded-md bg-gradient-to-r from-primary/80"
+								class="absolute bottom-0 -z-20 h-6 w-3/5 lg:w-full -translate-x-3 -rotate-2 rounded-md bg-gradient-to-r from-primary/70"
 							></span>
 
-							<span class="text-4xl lg:text-5xl 
-							">😎</span>
+							<span class="text-3xl lg:text-4xl">😎</span>
 							Tentang Saya
 						</h3>
 					</div>
 				</div>
 				<div class="flex flex-wrap items-center">
-					<div class="w-full lg:w-2/5 px-4 mb-6 lg:mb-0">
-						<div class="bg-dark rounded-3xl">
+					<div class="w-[85%] lg:w-2/5 px-4 mb-6 lg:mb-0 mx-auto group">
+						<div class="bg-dark rounded-3xl group-hover:bg-transparent transition duration-300">
 							<div
-								class="bg-primary rounded-3xl border-4 translate-x-1 -translate-y-1 border-dark overflow-hidden"
+								class="bg-primary rounded-3xl border-4 translate-x-1 -translate-y-1 border-dark overflow-hidden  transition duration-300"
 							>
 								<img
 									src="res\images\alvico-with-border.png"
 									alt="alvico image"
-									class="scale-110 translate-y-3 py-6 brightness-100 lg:brightness-110"
+									class="scale-110 translate-y-3 py-6 brightness-100 lg:brightness-110 group-hover:scale-125 transition duration-300 "
 								/>
 							</div>
 						</div>
@@ -340,30 +341,92 @@
 						<p class="max-w-xl mb-6">
 							Saya merupakan lulusan S1 Jurusan Sistem Informasi
 
-							<span class="text-yellow-400 relative group inline-block hover:mr-4 hover:translate-x-4 transition duration-200"
-								><img
+							<span
+								class="text-yellow-400 cursor-pointer group hover:font-semibold"
+							>
+								<img
 									src="res\images\unsri-logo.png"
 									alt="logo-unsri"
-									class="w-6 h-5 absolute left-0 group-hover:opacity-100 group-hover:-translate-x-7 opacity-0 transition duration-200 top-0"
+									class="w-6 h-5 inline-block group-hover:scale-110 transition ease-in-out duration-200"
 								/>
+
 								Universitas Sriwijaya
 							</span>
 
 							2024, yang saat ini tinggal di Palembang. Saya telah
 							menyelesaikan perjalanan kuliah saya dengan sukses
 							dan sedang fokus pada pengembangan karir di dunia
-							teknologi informasi.
+
+							<span class="font-semibold"
+								>teknologi informasi</span
+							>.
 						</p>
 
 						<p class="max-w-xl">
-							Saya memiliki ketertarikan pada dunia IT (Teknologi
-							Informasi) khususnya pada bidang pengembangan
-							perangkat lunak website dan android. Fokus saya saat
-							ini adalah untuk menguasai pengembangan website
-							menggunakan framework laravel dari bahasa
-							pemrograman PHP dan VueJs yang merupakan framework
-							dari bahasa pemrograman Javascript. Saat ini, saya
-							terbuka untuk bekerja.
+							Saya memiliki ketertarikan pada dunia
+							<span class="font-semibold"
+								>IT (Teknologi Informasi)</span
+							>
+							khususnya pada bidang pengembangan perangkat lunak
+							<span class="font-semibold"> website</span> dan
+							<span class="font-semibold">android</span>. Fokus
+							saya saat ini adalah untuk menguasai pengembangan
+							website menggunakan framework
+
+							<span
+								class="text-red-400 cursor-pointer group hover:font-semibold"
+							>
+								<img
+									src="res\images\laravel-icon.png"
+									alt="logo-laravel"
+									class="w-6 h-5 inline-block group-hover:scale-110 transition ease-in-out duration-200"
+								/>
+
+								laravel
+							</span>
+
+							dari bahasa pemrograman
+
+							<span
+								class="text-slate-500 cursor-pointer group hover:font-semibold"
+							>
+								<img
+									src="res\images\php-icon.png"
+									alt="logo-php"
+									class="w-7 h-6 inline-block group-hover:scale-110 transition ease-in-out duration-200"
+								/>
+
+								PHP
+							</span>
+
+							dan
+							<span
+								class="text-teal-500 cursor-pointer group hover:font-semibold"
+							>
+								<img
+									src="res\images\vue-icon.png"
+									alt="logo-vue"
+									class="w-6 h-5 inline-block group-hover:scale-110 transition ease-in-out duration-200"
+								/>
+
+								Vue JS
+							</span>
+							
+							yang merupakan framework dari bahasa pemrograman
+							
+							<span
+								class="text-yellow-400 cursor-pointer group hover:font-semibold"
+							>
+								<img
+									src="res\images\js-icon.png"
+									alt="logo-javascript"
+									class="w-6 h-5 inline-block group-hover:scale-110 transition ease-in-out duration-200"
+								/>
+
+								javascript
+							</span>. 
+							
+							Saat ini, saya terbuka untuk bekerja.
 						</p>
 					</div>
 				</div>

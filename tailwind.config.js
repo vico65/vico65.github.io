@@ -16,7 +16,7 @@ module.exports = {
         dark : '#0f172a',
         primary : '#0ea5e9',
         secondary : '#f43f5e',
-        coba : '#f1f5f9'
+        coba : '#64748b'
       },
       borderWidth: {
         '3': '3px'
