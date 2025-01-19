@@ -51,31 +51,60 @@ heroImage.addEventListener('mouseout', () => {
    blob.setAttribute('fill', primaryColor)
 })
 
+//membuat animasi saat navbar menu di hover
 
+let elements = document.querySelectorAll('.rolling-text')
 
+elements.forEach((element) => {
+   let innerText = element.innerText
+   element.innerHTML = ""
 
+   let textContainer = document.createElement('div')
+   textContainer.classList.add('block-style')
 
-// fitur ada garis loading di bawah navbar
-// let progress = 0;
-// const loadingBar = document.getElementById("loading-bar");
+   for(let letter of innerText) {
+      let span = document.createElement('span')
+      span.innerText = letter.trim() === "" ? "\xa0" : letter
+      span.classList.add('letter')
+      textContainer.appendChild(span)
+   }
 
-// let coba = document.getElementById('coba');
-// coba.addEventListener('mouseover', () => {
-// progress = 0;
-// const interval = setInterval(() => {
-//    if (progress >= 90) {
-//       clearInterval(interval);
-//    } else {
-//       progress += 2;
+   element.appendChild(textContainer)
 
-//       loadingBar.style.width = `${progress}%`;
-//    }
-//    }, 1);
-// })
+   let cloneTextContainer = textContainer.cloneNode(true)
+   cloneTextContainer.classList.add('absolute')
 
-// coba.addEventListener('mouseout', () => {
-// loadingBar.style.width = `0%`
-// })
+   for (let span of cloneTextContainer.childNodes) {
+      span.classList.add('opacity-0')
+   }
+   
+   element.appendChild(cloneTextContainer)
+})
+
+elements.forEach((element) => {
+   element.addEventListener('mouseenter', () => {
+      for (let span of element.firstChild.childNodes) {
+         span.classList.toggle('opacity-0')
+      }
+
+      for (let span of element.lastChild.childNodes) {
+         span.classList.toggle('opacity-0')
+      }
+   })
+
+   element.addEventListener('mouseleave', () => {
+      for (let span of element.firstChild.childNodes) {
+         span.classList.toggle('opacity-0')
+      }
+
+      for (let span of element.lastChild.childNodes) {
+         span.classList.toggle('opacity-0')
+      }
+   })
+})
+
+// let textContainer = document.createElement('div')
+// textContainer.classList.add('block')
 
 
 

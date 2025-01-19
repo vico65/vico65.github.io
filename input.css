@@ -15,7 +15,9 @@ body {
 }
 
 .nav-not-active {
-   @apply group-hover:text-primary  md:group-hover:text-dark md:group-hover:border-primary md:group-hover:border-b-[3px]
+   @apply lg:before:absolute lg:before:-bottom-[6px] lg:before:left-0 lg:before:w-full lg:before:h-1 lg:before:bg-primary lg:before:rounded-full
+   lg:before:scale-x-0 lg:before:transition lg:before:ease-linear lg:before:origin-left
+   group-hover:lg:before:scale-x-100
 }
 
 .navbar-fixed {
@@ -58,3 +60,70 @@ body {
    opacity: 1;
    }
 }
+
+/* animasi menu navbar */
+.rolling-text:hover .letter {
+   @apply -translate-y-full 
+}  
+
+.rolling-text .block-style:last-child {
+   @apply text-primary
+}
+
+.rolling-text>div .letter {
+   @apply inline-block transition ease-linear
+}
+
+.letter:nth-child(1) {
+   transition-delay: 0s
+}
+
+.letter:nth-child(2) {
+   transition-delay: 0.015s
+}
+
+.letter:nth-child(3) {
+   transition-delay: 0.03s
+}
+
+.letter:nth-child(4) {
+   transition-delay: 0.045s
+}
+
+.letter:nth-child(5) {
+   transition-delay: 0.06s
+}
+
+.letter:nth-child(6) {
+   transition-delay: 0.075s
+}
+
+.letter:nth-child(7) {
+   transition-delay: 0.09s
+}
+
+.letter:nth-child(8) {
+   transition-delay: 0.105s
+}
+
+.letter:nth-child(9) {
+   transition-delay: 0.12s
+}
+
+.letter:nth-child(10) {
+   transition-delay: 0.135s
+}
+
+.letter:nth-child(11) {
+   transition-delay: 0.15s
+}
+
+.letter:nth-child(12) {
+   transition-delay: 0.165s
+}
+
+.letter:nth-child(13) {
+   transition-delay: 0.18s
+}
+
+
