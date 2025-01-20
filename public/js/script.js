@@ -82,25 +82,16 @@ elements.forEach((element) => {
 })
 
 elements.forEach((element) => {
-   element.addEventListener('mouseenter', () => {
-      for (let span of element.firstChild.childNodes) {
-         span.classList.toggle('opacity-0')
-      }
+   const toggleOpacity = () => {
+      [element.firstChild, element.lastChild].forEach((child) => {
+         child.childNodes.forEach((span) => {
+            span.classList.toggle('opacity-0')
+         })
+      })
+   }
 
-      for (let span of element.lastChild.childNodes) {
-         span.classList.toggle('opacity-0')
-      }
-   })
-
-   element.addEventListener('mouseleave', () => {
-      for (let span of element.firstChild.childNodes) {
-         span.classList.toggle('opacity-0')
-      }
-
-      for (let span of element.lastChild.childNodes) {
-         span.classList.toggle('opacity-0')
-      }
-   })
+   element.addEventListener('mouseenter', toggleOpacity)
+   element.addEventListener('mouseleave', toggleOpacity)
 })
 
 // let textContainer = document.createElement('div')
