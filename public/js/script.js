@@ -94,8 +94,44 @@ elements.forEach((element) => {
    element.addEventListener('mouseleave', toggleOpacity)
 })
 
-// let textContainer = document.createElement('div')
-// textContainer.classList.add('block')
+// Menambahkan animasi teks acak saat di hover
 
+let webTitle = document.querySelector('.web-title')
 
+let shuffleAnimation = (event) => {
+   const target = event.target.childNodes[1]
 
+   if(target.dataset.animating) return
+
+   target.dataset.animating = true
+
+   let word = target.innerText
+
+   let shuffles = 0 
+   const maxShuffles = 10
+   const intervalDuration = 500 / maxShuffles
+
+   let animationInterval = setInterval(() => {
+      if (shuffles >= maxShuffles) {
+         clearInterval(animationInterval)
+         target.innerText = word
+         delete target.dataset.animating
+      } else {
+         const length = target.innerText.length
+         let shuffleText = ""
+         for (let i=0; i<length; i++) {
+            shuffleText += getRandomCharacter();
+         }
+         target.innerText = shuffleText
+      }
+      shuffles++
+      console.log(shuffles)
+   }, intervalDuration)
+}
+
+webTitle.addEventListener('mouseenter', shuffleAnimation)
+
+let getRandomCharacter = () => {
+   const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+   return chars[Math.floor(Math.random() * chars.length)]
+}
