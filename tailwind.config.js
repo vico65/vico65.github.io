@@ -20,6 +20,12 @@ module.exports = {
       },
       borderWidth: {
         '3': '3px'
+      },
+      backgroundImage: {
+        'alvico' : "url('res/images/alvico.jpg')"
+      },
+      spacing : {
+        '0.5' : '2px'
       }
     }
   },

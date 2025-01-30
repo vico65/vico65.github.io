@@ -45,8 +45,12 @@ body {
    animation : blink 1s ease infinite;
 }
 
-.texture {
+.texture-cubes {
    background-image: url("res/images/texture/cubes.png");
+}
+
+.texture-always-grey {
+   background-image: url("res/images/texture/diagonal-striped-brick.png");
 }
 
 @keyframes blink {
