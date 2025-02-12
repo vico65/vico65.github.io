@@ -125,14 +125,12 @@ let shuffleAnimation = (event) => {
          target.innerText = shuffleText
       }
       shuffles++
-      console.log(shuffles)
    }, intervalDuration)
 }
 
-webTitle.addEventListener('mouseenter', shuffleAnimation)
+// webTitle.addEventListener('mouseenter', shuffleAnimation)
 
 let getRandomCharacter = () => {
    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
    return chars[Math.floor(Math.random() * chars.length)]
 }
-
