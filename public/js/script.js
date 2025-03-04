@@ -134,3 +134,23 @@ let getRandomCharacter = () => {
    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
    return chars[Math.floor(Math.random() * chars.length)]
 }
+
+// membuat animasi tombol kontak bergeser kebawah ketika tombol kontak lainnya di hover
+
+let contactButtons = document.querySelectorAll('.contact-button')
+let contactButtonsLength = contactButtons.length
+let currentWidth = window.innerWidth
+let isMobile = currentWidth <= 768
+let constanta = isMobile ? 1 : 2
+   
+contactButtons.forEach((contactButton, index) => {
+   let toggleTranslate = () => {
+      for (let i = index + constanta; i < contactButtonsLength; i = i + constanta) {
+         contactButtons[i].classList.toggle('translate');
+      }
+   };
+   
+   contactButton.addEventListener('mouseenter', toggleTranslate);
+   contactButton.addEventListener('mouseleave', toggleTranslate);
+})
+

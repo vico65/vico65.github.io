@@ -19,6 +19,7 @@ module.exports = {
         coba : '#64748b'
       },
       borderWidth: {
+        '1.5' : '1.5px',
         '3': '3px'
       },
       backgroundImage: {
@@ -26,6 +27,9 @@ module.exports = {
       },
       spacing : {
         '0.5' : '2px'
+      },
+      height : {
+        '18' : '75px'
       }
     }
   },

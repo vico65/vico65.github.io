@@ -55,8 +55,7 @@ body {
 
 .texture-paper {
 	background-image: url("res/images/texture/natural-paper.png");
-
-   @apply brightness-95 bg-primary
+	@apply brightness-95 bg-primary
 }
 
 @keyframes blink {
@@ -134,4 +133,9 @@ body {
 
 .letter:nth-child(13) {
 	transition-delay: 0.18s;
+}
+
+/* translate element */
+.translate {
+	@apply translate-y-9 md:translate-y-7 transition duration-300 ;
 }
