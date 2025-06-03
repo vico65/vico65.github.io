@@ -135,22 +135,168 @@ let getRandomCharacter = () => {
    return chars[Math.floor(Math.random() * chars.length)]
 }
 
+const contacts = [
+   {
+      name: "gmail",
+      icon: "gmail",
+      link: "mailto:alvicojr65@gmail.com",
+      bgColor : "bg-red-500",
+      textColor : "text-white",
+      desc : "Email profesional saya, hubungi untuk kolaborasi!"
+   },
+   {
+      name: "instagram 1",
+      icon: "instagram",
+      link: "https://www.instagram.com/vico65_/",
+      bgColor : "bg-linear-to-tr from-yellow-300 via-red-500 to-fuchsia-500",
+      textColor : "text-white",
+      desc : "Akun instagram formal saya, Follow!!"
+   },
+   {
+      name: "github",
+      icon: "github",
+      link: "https://github.com/vico65",
+      bgColor : "bg-dark",
+      textColor : "text-white",
+      desc : "Kunjungi repository projek saya disini, Follow!!"
+   },
+   {
+      name: "linkedin",
+      icon: "linkedin",
+      link: "https://www.linkedin.com/in/alvico65/",
+      bgColor : "bg-primary",
+      textColor : "text-white",
+      desc : "Mari membangun koneksi profesional bersama!"
+   },
+   {
+      name: "instagram 2",
+      icon: "instagram",
+      link: "https://www.instagram.com/bjismangk0/",
+      bgColor : "bg-linear-to-tr from-yellow-300 via-red-500 to-fuchsia-500",
+      textColor : "text-white",
+      desc : "Akun ig kedua, random post about movie or meme."
+   },
+   {
+      name : "facebook",
+      icon : "facebook",
+      link : "https://www.facebook.com/alvico.casilas/",
+      bgColor : "bg-blue-700",
+      textColor : "text-white",
+      desc : "Sosmed yang sering saya gunakan saat ini, Add!!"
+   },
+   {
+      name : "youtube",
+      icon : "youtube",
+      link : "https://www.youtube.com/@alvico2228",
+      bgColor : "bg-red-600",
+      textColor : "text-white",
+      desc : "Channel yt, namun jarang upload konten di sini"
+   },
+   {
+      name : "tiktok",
+      icon : "tiktok",
+      link : "https://www.tiktok.com/@vico65_ ",
+      bgColor : "bg-dark",
+      textColor : "text-white",
+      desc : "Sosmed yang sering saya gunakan saat ini, Follow!!"
+   }
+]
+
+
 // membuat animasi tombol kontak bergeser kebawah ketika tombol kontak lainnya di hover
 
-let contactButtons = document.querySelectorAll('.contact-button')
-let contactButtonsLength = contactButtons.length
-let currentWidth = window.innerWidth
-let isMobile = currentWidth <= 768
+let contactButtons = document.querySelectorAll('.contact-button');
+let contactButtonsLength = contactButtons.length;
+let isMobile = window.innerWidth <= 768;
 let constanta = isMobile ? 1 : 2
    
 contactButtons.forEach((contactButton, index) => {
-   let toggleTranslate = () => {
+
+   contactButton.innerHTML = 
+   `
+      <!-- wadah buat nampung tampilan tombol -->
+      <a
+         href=""
+         class="w-[79%] md:w-full group relative block"
+      >
+         <!-- primary container -->
+         <div
+            class="py-2 lg:py-3 px-3 text-base font-semibold ${contacts[index].bgColor} text-slate-100 rounded-xs border-3 border-dark transition duration-300 ease-in-out flex gap-2 w-full content-center group-hover:shadow-xl capitalize"
+         >
+            <div class="flex justify-center ">
+               <img src="public\\svg\\${contacts[index].icon}.svg" alt="Logo ${contacts[index].name}" srcset="">
+            </div>
+
+            ${contacts[index].name}
+         </div>
+
+         <!-- secondary container -->
+         <div
+            class="bg-slate-700 inset-0 absolute translate-y-1 md:group-hover:translate-y-6 translate-x-1 md:group-hover:translate-x-2 -z-10 transition duration-300 ease-in-out md:group-hover:border-dark md:group-hover:border-3 text-slate-700 md:group-hover:bg-gray-200 flex content-end pt-4 pb-1 md:pt-10 md:group-hover:h-15 md:pb-1"
+         >
+            <p
+               class="text-xs md:text-sm self-end px-2 group-hover:flex hidden font-medium text-ellipsis"
+            >
+               ${contacts[index].desc}
+            </p>
+         </div>
+      </a>
+
+      <!-- button buat tampilan mobile -->
+      <div
+         data-id="7"
+         class="p-1 ${contacts[index].bgColor}  border-3 border-dark cursor-pointer rounded-lg text-white md:hidden flex flex-col justify-center h-fit group relative "
+      >
+         <svg
+            width="26"
+            height="26"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            xmlns="http://www.w3.org/2000/svg"
+            class="transition duration-300 ease-in-out"
+         >
+            <path
+               d="M12 7.5v9m3.5-3.5L12 16.5 8.5 13"
+            />
+            <path
+               d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0"
+            />
+         </svg>
+      </div>
+   `
+
+   const toggleTranslate = () => {
       for (let i = index + constanta; i < contactButtonsLength; i = i + constanta) {
          contactButtons[i].classList.toggle('translate');
       }
    };
+
+   let toggleTranslateButtonForMobile = () => {
+      const primaryContainerSosmed = contactButton.children[0].children[1];
+      const iconButtonForMobile = contactButton.children[1].children[0];
+      const descForSosmed = primaryContainerSosmed.children[0];
+
+      primaryContainerSosmed.classList.toggle('translate-contact-button-mobile');
+      descForSosmed.classList.toggle('hidden');
+      descForSosmed.classList.toggle('flex');
+      iconButtonForMobile.classList.toggle('rotate-180');
+
+      toggleTranslate();
+   }
    
-   contactButton.addEventListener('mouseenter', toggleTranslate);
-   contactButton.addEventListener('mouseleave', toggleTranslate);
+   if(!isMobile) {
+      contactButton.addEventListener('mouseenter', toggleTranslate);
+      contactButton.addEventListener('mouseleave', toggleTranslate);
+   } else {
+      contactButton.children[1].addEventListener('click', toggleTranslateButtonForMobile);
+   }
 })
+
+
+
+// console.log(contactButtons[7].childNodes)
 

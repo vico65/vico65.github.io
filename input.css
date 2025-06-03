@@ -1,6 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-primary: JetBrains Mono;
+  --font-secondary: Poppins;
+
+  --color-dark: #0f172a;
+  --color-primary: #0ea5e9;
+  --color-secondary: #f43f5e;
+  --color-coba: #64748b;
+
+  --border-width-3: 3px;
+  --border-width-1_5: 1.5px;
+
+  --background-image-alvico: url('res/images/alvico.jpg');
+
+  --spacing-0_5: 2px;
+
+  --height-18: 75px;
+
+  --text-xxs: 11px;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 body {
 	font-family: "Poppins", sans-serif;
@@ -17,11 +61,11 @@ body {
 .nav-not-active {
 	@apply lg:before:absolute lg:before:-bottom-[6px] lg:before:left-0 lg:before:w-full lg:before:h-1 lg:before:bg-primary lg:before:rounded-full
    lg:before:scale-x-0 lg:before:transition lg:before:ease-linear lg:before:origin-left
-   group-hover:lg:before:scale-x-100;
+   lg:group-hover:before:scale-x-100;
 }
 
 .navbar-fixed {
-	@apply z-50 fixed bg-white bg-opacity-80 backdrop-blur-[1px];
+	@apply z-50 fixed bg-white opacity-80 backdrop-blur-[1px];
 	box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -139,3 +183,8 @@ body {
 .translate {
 	@apply translate-y-9 md:translate-y-7 transition duration-300 ;
 }
+
+.translate-contact-button-mobile {
+	@apply translate-y-8 translate-x-2 border-dark border-3 bg-gray-200 h-14 pb-1;
+}
+
