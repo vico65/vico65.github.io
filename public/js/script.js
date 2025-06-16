@@ -230,7 +230,27 @@ contactButtons.forEach((contactButton, index) => {
    }
 })
 
+// play dan pause music quotes
+let quotesAudioButton = document.getElementById('quotes_audio_button');
+let quotesAudio = document.getElementById('quotes_audio');
+let start_audio_icon = document.getElementById('start_audio_icon');
+let pause_audio_icon = document.getElementById('pause_audio_icon');
+pause_audio_icon.classList.toggle('hidden');
 
+quotesAudioButton.addEventListener('click', () => {
+   if(quotesAudio.paused) {
+      quotesAudio.play();
+      
+
+   } else {
+      quotesAudio.pause();
+   }
+
+   pause_audio_icon.classList.toggle('hidden');
+   start_audio_icon.classList.toggle('hidden');
+})
+
+console.log(quotesAudioButton);
 
 // console.log(contactButtons[7].childNodes)
 
