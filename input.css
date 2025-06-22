@@ -5,6 +5,7 @@
 @theme {
   --font-primary: JetBrains Mono;
   --font-secondary: Poppins;
+  --font-primary-quotes: Playfair Display;
 
   --color-dark: #0f172a;
   --color-primary: #0ea5e9;

@@ -1,4 +1,5 @@
 import {contacts} from './contacts.js';
+import {quotes} from './quotes.js';
 
 //membuat navbar fixed by sandhika
 window.onscroll = function() {
@@ -235,13 +236,18 @@ let quotesAudioButton = document.getElementById('quotes_audio_button');
 let quotesAudio = document.getElementById('quotes_audio');
 let start_audio_icon = document.getElementById('start_audio_icon');
 let pause_audio_icon = document.getElementById('pause_audio_icon');
+let quotesCaption = document.getElementById('quotes_caption');
 pause_audio_icon.classList.toggle('hidden');
+
+const random = Math.random() * quotes.length | 0;
+quotesCaption.innerText = quotes[random].caption;
+console.log(quotes[random].caption);
+// console.log(quotes[0].caption);
+console.dir(quotesAudio);
 
 quotesAudioButton.addEventListener('click', () => {
    if(quotesAudio.paused) {
       quotesAudio.play();
-      
-
    } else {
       quotesAudio.pause();
    }
@@ -250,7 +256,6 @@ quotesAudioButton.addEventListener('click', () => {
    start_audio_icon.classList.toggle('hidden');
 })
 
-console.log(quotesAudioButton);
 
 // console.log(contactButtons[7].childNodes)
 
