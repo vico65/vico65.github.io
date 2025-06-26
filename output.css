@@ -14,7 +14,6 @@
     --color-orange-500: oklch(0.705 0.213 47.604);
     --color-orange-600: oklch(0.646 0.222 41.116);
     --color-amber-500: oklch(0.769 0.188 70.08);
-    --color-amber-600: oklch(0.666 0.179 58.318);
     --color-yellow-200: oklch(0.945 0.129 101.54);
     --color-yellow-300: oklch(0.905 0.182 98.111);
     --color-yellow-400: oklch(0.852 0.199 91.936);
@@ -57,6 +56,7 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
+    --font-weight-thin: 100;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -85,7 +85,8 @@
       --font-mono--font-variation-settings
     );
     --font-primary: JetBrains Mono;
-    --font-primary-quotes: Playfair Display;
+    --font-primary-quotes: Lora;
+    --font-secondary-quotes: Open Sans;
     --color-dark: #0f172a;
     --color-primary: #0ea5e9;
     --color-secondary: #f43f5e;
@@ -634,9 +635,6 @@
       background-color: color-mix(in oklab, var(--color-amber-500) 60%, transparent);
     }
   }
-  .bg-amber-600 {
-    background-color: var(--color-amber-600);
-  }
   .bg-blue-700 {
     background-color: var(--color-blue-700);
   }
@@ -803,6 +801,9 @@
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
   .py-0 {
     padding-block: calc(var(--spacing) * 0);
   }
@@ -845,9 +846,6 @@
   .pt-25 {
     padding-top: calc(var(--spacing) * 25);
   }
-  .pt-30 {
-    padding-top: calc(var(--spacing) * 30);
-  }
   .pb-1 {
     padding-bottom: calc(var(--spacing) * 1);
   }
@@ -862,9 +860,6 @@
   }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
-  }
-  .pb-25 {
-    padding-bottom: calc(var(--spacing) * 25);
   }
   .pb-35 {
     padding-bottom: calc(var(--spacing) * 35);
@@ -883,6 +878,9 @@
   }
   .font-primary-quotes {
     font-family: var(--font-primary-quotes);
+  }
+  .font-secondary-quotes {
+    font-family: var(--font-secondary-quotes);
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -939,6 +937,10 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .font-thin {
+    --tw-font-weight: var(--font-weight-thin);
+    font-weight: var(--font-weight-thin);
   }
   .text-pretty {
     text-wrap: pretty;

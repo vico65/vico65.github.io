@@ -237,13 +237,19 @@ let quotesAudio = document.getElementById('quotes_audio');
 let start_audio_icon = document.getElementById('start_audio_icon');
 let pause_audio_icon = document.getElementById('pause_audio_icon');
 let quotesCaption = document.getElementById('quotes_caption');
+let quotesAuthor = document.getElementById('quotes_author');
+let quotesOrigin = document.getElementById('quotes_origin');
 pause_audio_icon.classList.toggle('hidden');
 
+// menampilkan quotes random 
 const random = Math.random() * quotes.length | 0;
 quotesCaption.innerText = quotes[random].caption;
-console.log(quotes[random].caption);
-// console.log(quotes[0].caption);
-console.dir(quotesAudio);
+quotesAuthor.innerText = quotes[random].author;
+quotesOrigin.innerText = quotes[random].origin;
+
+// menyesuaikan volume
+quotesAudio.volume = 0.5;
+
 
 quotesAudioButton.addEventListener('click', () => {
    if(quotesAudio.paused) {
