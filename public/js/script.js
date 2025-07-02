@@ -5,11 +5,18 @@ import {quotes} from './quotes.js';
 window.onscroll = function() {
    const header = document.querySelector('header');
    const fixedNav = header.offsetTop;
+   console.log(window.scrollY);
 
-   if(window.scrollY > fixedNav) {
+   if (window.scrollY > 3800 && window.scrollY < 4490) {
+      console.log("ya")
+      header.classList.add('navbar-quotes');
+      header.classList.remove('navbar-fixed');
+   } else if(window.scrollY > fixedNav) {
       header.classList.add('navbar-fixed');
+      header.classList.remove('navbar-quotes');
    } else {
       header.classList.remove('navbar-fixed');
+      header.classList.remove('navbar-quotes');
    }
    
 }

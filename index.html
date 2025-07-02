@@ -28,7 +28,10 @@
 			href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
 			rel="stylesheet"
 		/>
-		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+			rel="stylesheet"
+		/>
 
 		<link rel="stylesheet" href="node_modules\@mynaui\icons\mynaui.css" />
 		<link href="output.css" rel="stylesheet" />
@@ -112,6 +115,14 @@
 										class="px-2 py-1 nav-not-active rolling-text inline-block relative"
 									>
 										Kontak
+									</a>
+								</li>
+								<li class="group pb-1 lg:pb-0">
+									<a
+										href="#quotes"
+										class="px-2 py-1 nav-not-active rolling-text inline-block relative"
+									>
+										Quotes
 									</a>
 								</li>
 							</ul>
@@ -1026,26 +1037,8 @@
 		<!-- Contact Section End -->
 
 		<!-- quotes start -->
-		<section id="quotes" class="pt-10 pb-20 bg-dark text-white">
+		<section id="quotes" class="pt-30 pb-10 bg-dark text-white">
 			<div class="px-5">
-				<!-- button play audio -->
-				<button
-					type="button"
-					id="quotes_audio_button"
-					class="px-0.5 py-0.5 rounded-2xl"
-				>
-					<img
-						src="public\svg\start.svg"
-						alt="pause_icon"
-						id="start_audio_icon"
-					/>
-					<img
-						src="public\svg\pause.svg"
-						alt="pause_icon"
-						id="pause_audio_icon"
-					/>
-				</button>
-
 				<!-- audio element -->
 				<audio controls id="quotes_audio" class="hidden">
 					<source src="res\music\dramamine.mp3" type="audio/mpeg" />
@@ -1054,9 +1047,9 @@
 
 				<!-- caption -->
 				<div
-					class="mx-auto w-full mt-10 mb-10 pt-20 pb-20 px-10 flex flex-wrap text-center"
+					class="mx-auto w-full mt-10 pt-20 pb-30 px-10 flex flex-wrap text-center"
 				>
-					<div class="w-full flex justify-center mb-5 ">
+					<div class="w-full flex justify-center mb-10">
 						<p class="font-primary-quotes text-2xl font-medium">
 							<span>"</span>
 							<span id="quotes_caption"></span>
@@ -1064,10 +1057,32 @@
 						</p>
 					</div>
 
-					<p class="font-secondary-quotes w-full font-bold text-lg"> <span id="quotes_author"></span></p>
-					<p class="font-secondary-quotes w-full text-sm font-thin"> <span id="quotes_origin"></span></p>
+					<p class="font-secondary-quotes w-full font-bold text-lg">
+						<span id="quotes_author"></span>
+					</p>
+					<p class="font-secondary-quotes w-full text-sm font-thin">
+						<span id="quotes_origin"></span>
+					</p>
 				</div>
 			</div>
+
+			<!-- button play audio -->
+			<button
+				type="button"
+				id="quotes_audio_button"
+				class="px-4 py-0.5 rounded-2xl mt-10 brightness-50 hover:brightness-100 cursor-pointer hover:scale-110"
+			>
+				<img
+					src="public\svg\start.svg"
+					alt="pause_icon"
+					id="start_audio_icon"
+				/>
+				<img
+					src="public\svg\pause.svg"
+					alt="pause_icon"
+					id="pause_audio_icon"
+				/>
+			</button>
 		</section>
 		<!-- quotes end -->
 
