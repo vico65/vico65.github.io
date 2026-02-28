@@ -5,7 +5,6 @@ import {quotes} from './quotes.js';
 window.onscroll = function() {
    const header = document.querySelector('header');
    const fixedNav = header.offsetTop;
-   console.log(window.scrollY);
 
    if (window.scrollY > 3800 && window.scrollY < 4490) {
       console.log("ya")
@@ -41,8 +40,7 @@ hamburgerMenuButton.addEventListener('click', () => {
    hamburgerMenuButton.classList.toggle('hamburger-active');
    navbarMenu.classList.toggle('opacity-0');
    navbarMenu.classList.toggle('opacity-100');
-   navbarMenu.classList.toggle('translate-x-0');
-   navbarMenu.classList.toggle('translate-x-[120%]');
+
 });
 
 //mengubah warna blob saat di hover
@@ -136,7 +134,7 @@ let shuffleAnimation = (event) => {
    }, intervalDuration)
 }
 
-// webTitle.addEventListener('mouseenter', shuffleAnimation)
+webTitle.addEventListener('mouseenter', shuffleAnimation)
 
 let getRandomCharacter = () => {
    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
@@ -151,6 +149,16 @@ let contactButtons = document.querySelectorAll('.contact-button');
 let contactButtonsLength = contactButtons.length;
 let isMobile = window.innerWidth <= 768;
 let constanta = isMobile ? 1 : 2
+let active = null
+
+// const deleteActive = (index) => {
+//    const primaryContainerSosmed = contactButtons[index].children[0].children[1];
+//    const descForSosmed = primaryContainerSosmed[index].children[0];
+
+//    descForSosmed.;
+//    contactButtons[index].children[0].children[1].classList.toggle('hidden');
+//    descForSosmed.classList.toggle('flex');
+// }
    
 contactButtons.forEach((contactButton, index) => {
 
@@ -212,7 +220,9 @@ contactButtons.forEach((contactButton, index) => {
    `
 
    const toggleTranslate = () => {
-      for (let i = index + constanta; i < contactButtonsLength; i = i + constanta) {
+      for (let i = index + constanta; i < contactButtonsLength; i = i + constanta) {   
+         // deleteActive(active)
+         
          contactButtons[i].classList.toggle('translate');
       }
    };
@@ -227,6 +237,20 @@ contactButtons.forEach((contactButton, index) => {
       descForSosmed.classList.toggle('flex');
       iconButtonForMobile.classList.toggle('rotate-180');
 
+      if(active != null && active != index) {
+         const primaryContainerSosmedActive = contactButtons[active].children[0].children[1];
+         const descForSosmedActive = primaryContainerSosmedActive.children[0];
+         primaryContainerSosmedActive.classList.toggle('translate-contact-button-mobile');
+         descForSosmedActive.classList.toggle('hidden');
+         descForSosmedActive.classList.toggle('flex');
+         contactButtons[index].classList.toggle('translate');
+      }
+   
+      if (!descForSosmed.classList.contains('hidden')) active = index
+      else active = null
+
+      
+
       toggleTranslate();
    }
    
@@ -234,6 +258,7 @@ contactButtons.forEach((contactButton, index) => {
       contactButton.addEventListener('mouseenter', toggleTranslate);
       contactButton.addEventListener('mouseleave', toggleTranslate);
    } else {
+      // children 1 itu button
       contactButton.children[1].addEventListener('click', toggleTranslateButtonForMobile);
    }
 })

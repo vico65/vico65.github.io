@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="overflow-x-hidden">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,11 +37,11 @@
 		<link href="output.css" rel="stylesheet" />
 		<title>Alvico</title>
 	</head>
-	<body class="overflow-x-hidden texture-cubes">
+	<body class="texture-cubes overflow-x-hidden">
 		<header
-			class="w-full absolute top-0 left-0 z-10 dark:bg-dark bg-transparent flex items-center"
+			class="w-full absolute top-0 left-0 z-10 dark:bg-dark flex items-center"
 		>
-			<div class="w-full px-4">
+			<div class="w-full px-4 ">
 				<div class="flex items-center justify-between relative">
 					<!-- judul -->
 					<div
@@ -60,7 +60,7 @@
 					</div>
 
 					<!-- Menu list -->
-					<div class="flex items-center px-4 md:w-3/4 lg:w-1/2">
+					<div class="flex items-center px-4 w-fit md:w-3/4 lg:w-1/2">
 						<button
 							id="hamburger-menu"
 							name="hamburger-menu"
@@ -80,7 +80,9 @@
 
 						<nav
 							id="nav-menu"
-							class="absolute max-w-[250px] py-2 border-4 md:border-0 border-dark font-medium bg-white rounded-xs w-full top-full right-4 translate-x-[120%] md:translate-x-0 transition duration-300 ease-in-out opacity-0 md:opacity-100 md:flex md:static md:bg-transparent md:max-w-full md:shadow-none md:rounded-none md:justify-between"
+							class="absolute max-w-[250px] py-2 border-4 md:border-0 border-dark font-medium bg-white rounded-xs w-full top-full right-4 pointer-events-none
+							
+							md:translate-x-0 transition duration-300 ease-in-out opacity-0 md:opacity-100 md:flex md:static md:bg-transparent md:max-w-full md:shadow-none md:rounded-none md:justify-between"
 						>
 							<ul
 								class="block md:flex md:justify-between md:w-[75%]"
@@ -197,8 +199,8 @@
 		</header>
 
 		<!-- home Section Start -->
-		<section id="home" class="pt-24 lg:pt-36 mx-auto lg:h-screen">
-			<div class="container max-w-[980px]">
+		<section id="home" class="pt-24 lg:pt-36 mx-auto lg:h-screen overflow-x-hidden ">
+			<div class="container lg:max-w-[980px]">
 				<div class="flex flex-wrap">
 					<div class="w-full lg:w-1/2 self-center px-4">
 						<h1
@@ -232,11 +234,12 @@
 						<p
 							class="font-medium leading-relaxed capitalize py-1 text-slate-400 mb-7"
 						>
-							Math enthusiast, movie lover, and football fan -
+							<!-- tambahkan pop up di bintang ini dengan isi  -->
+							Math enthusiast*, movie lover, and football fan -
 							barca 🔵🔴
 						</p>
 
-						<div class="flex flex-wrap gap-3 lg:gap-5">
+						<div class="flex flex-wrap gap-3 lg:gap-5 ">
 							<a href="res\pdf\Alvico - cv.pdf">
 								<button class="bg-dark">
 									<div
@@ -298,7 +301,7 @@
 							<img
 								src="res\ilustrator.svg"
 								alt="profil image"
-								class="coba max-w-full mx-auto scale-90 lg:scale-105 transition duration-300 ease-in-out group-hover:scale-110 lg:group-hover:scale-125"
+								class="max-w-full mx-auto scale-90 lg:scale-105 transition duration-300 ease-in-out group-hover:scale-110 lg:group-hover:scale-125"
 							/>
 							<div
 								class="blob absolute bottom-0 left-1/2 -translate-x-1/2 -z-10 scale-75 lg:scale-100 transition duration-300 ease-in-out group-hover:scale-50 lg:group-hover:scale-75"
@@ -662,7 +665,7 @@
 										href="https://github.com/vico65/Sistem-Pengelolaan-Dokumen-Perjalanan-Dinas"
 										class="hover:text-slate-200"
 									>
-										Pengelolaan Dokumen Perjalanan Dinas</a
+										Pengelolaan Dokumen PerjaDin</a
 									>
 								</h3>
 								<p
@@ -681,11 +684,6 @@
 									class="bg-cyan-400 px-1 md:px-2 py-0.5 md:py-1 border-dark border-3"
 								>
 									#TailwindCSS
-								</div>
-								<div
-									class="bg-yellow-400 px-1 md:px-2 py-0.5 md:py-1 border-dark border-3"
-								>
-									#Html
 								</div>
 								<div
 									class="bg-green-500 px-1 md:px-2 py-0.5 md:py-1 border-dark border-3"
@@ -1321,5 +1319,5 @@
 	<script src="public\js\script.js" type="module"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
-	<!-- <script src="public\js\gsap.js"></script> -->
+	<script src="public\js\gsap.js"></script>
 </html>
