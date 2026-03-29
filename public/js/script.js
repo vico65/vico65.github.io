@@ -160,13 +160,15 @@ let active = null
 //    descForSosmed.classList.toggle('flex');
 // }
    
+// Tiap button kontak itu punya class contact-button
 contactButtons.forEach((contactButton, index) => {
 
+   // tiap contact button itu awalnya kosong, namun akan diisi dengan elemen di dalam inner html dibawah
    contactButton.innerHTML = 
    `
       <!-- wadah buat nampung tampilan tombol -->
       <a
-         href=""
+         href="${contacts[index].link}"
          class="w-[79%] md:w-full group relative block"
       >
          <!-- primary container -->
@@ -182,10 +184,10 @@ contactButtons.forEach((contactButton, index) => {
 
          <!-- secondary container -->
          <div
-            class="bg-slate-700 inset-0 absolute translate-y-1 md:group-hover:translate-y-6 translate-x-1 md:group-hover:translate-x-2 -z-10 transition duration-300 ease-in-out md:group-hover:border-dark md:group-hover:border-3 text-slate-700 md:group-hover:bg-gray-200 flex content-end pt-4 pb-1 md:pt-10 md:group-hover:h-15 md:pb-1"
+            class="bg-slate-700 inset-0 absolute translate-y-1 md:group-hover:translate-y-6 translate-x-1 md:group-hover:translate-x-2 -z-10 transition duration-300 ease-in-out  text-slate-700 pt-4 pb-1 md:pt-10 md:group-hover:h-15 md:pb-1 md:group-hover:border-dark md:group-hover:border-3 md:group-hover:bg-gray-200 md:flex md:content-end"
          >
             <p
-               class="text-xs md:text-sm self-end px-2 group-hover:flex hidden font-medium text-ellipsis"
+               class="text-xs md:text-sm hidden font-medium text-ellipsis self-end px-2 group-hover:flex"
             >
                ${contacts[index].desc}
             </p>
@@ -194,7 +196,6 @@ contactButtons.forEach((contactButton, index) => {
 
       <!-- button buat tampilan mobile -->
       <div
-         data-id="7"
          class="p-1 ${contacts[index].bgColor}  border-3 border-dark cursor-pointer rounded-lg text-white md:hidden flex flex-col justify-center h-fit group relative "
       >
          <svg
@@ -219,40 +220,64 @@ contactButtons.forEach((contactButton, index) => {
       </div>
    `
 
-   const toggleTranslate = () => {
-      for (let i = index + constanta; i < contactButtonsLength; i = i + constanta) {   
-         // deleteActive(active)
-         
-         contactButtons[i].classList.toggle('translate');
-      }
-   };
+   //fungsi untuk toggle elemen pada mobile
 
+   /* 
+      Struktur html
+
+      div
+         a --> wadah 2 kontainer
+            div1 --> kontainer pertama yang statis --> 
+            div1
+
+            div2 --> kontainer kedua yang hilang --> (primaryContainerSosmed)
+               p --> tulisan deskripsi sosmed --> (descForSosmedS)
+               p
+            div2 
+         a
+
+         div --> button untuk mobile
+            svg --> icon button arrow --> (iconButtonForMobile)
+            svg
+         div
+      div
+   */
    let toggleTranslateButtonForMobile = () => {
-      const primaryContainerSosmed = contactButton.children[0].children[1];
-      const iconButtonForMobile = contactButton.children[1].children[0];
-      const descForSosmed = primaryContainerSosmed.children[0];
+      const primaryContainerSosmed = contactButton.children[0].children[1];       // kontainer kedua
+      const descForSosmed = primaryContainerSosmed.children[0]; // elemen p pada kontainer kedua
+      const iconButtonForMobile = contactButton.children[1].children[0]; // svg dari icon
 
-      primaryContainerSosmed.classList.toggle('translate-contact-button-mobile');
-      descForSosmed.classList.toggle('hidden');
-      descForSosmed.classList.toggle('flex');
-      iconButtonForMobile.classList.toggle('rotate-180');
-
+       //kalo active ada dan active bukan index
       if(active != null && active != index) {
          const primaryContainerSosmedActive = contactButtons[active].children[0].children[1];
          const descForSosmedActive = primaryContainerSosmedActive.children[0];
          primaryContainerSosmedActive.classList.toggle('translate-contact-button-mobile');
          descForSosmedActive.classList.toggle('hidden');
-         descForSosmedActive.classList.toggle('flex');
-         contactButtons[index].classList.toggle('translate');
+
+         toggleTranslate(active);
       }
-   
+
+      // mengubah background dan css lain dari kontainer kedua yang hilang
+      primaryContainerSosmed.classList.toggle('translate-contact-button-mobile');
+
+      // memunculkan deskripsi pada elemen p
+      descForSosmed.classList.toggle('hidden');
+      // descForSosmed.classList.toggle('flex');
+
+      // animasi pada arrow icon button, akan terbalik ketika dipencet
+      iconButtonForMobile.classList.toggle('rotate-180');
+
       if (!descForSosmed.classList.contains('hidden')) active = index
       else active = null
 
-      
-
-      toggleTranslate();
+      toggleTranslate(index);
    }
+
+   const toggleTranslate = (indeks) => {
+      for (let i = indeks + constanta; i < contactButtonsLength; i = i + constanta) {   
+         contactButtons[i].classList.toggle('translate');
+      }
+   };
    
    if(!isMobile) {
       contactButton.addEventListener('mouseenter', toggleTranslate);
